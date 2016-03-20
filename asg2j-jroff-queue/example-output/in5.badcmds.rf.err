@@ -1,0 +1,3 @@
+<standard input>:30: warning [p 1, 1.0i]: can't break line
+<standard input>:33: warning: numeric expression expected (got `n')
+grotty:<standard input>:5: character above first line discarded

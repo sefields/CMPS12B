@@ -1,0 +1,1323 @@
+%!PS-Adobe-3.0
+%%BoundingBox: 38 24 574 768
+%%Title: Enscript Output
+%%For: Wesley Mackey
+%%Creator: GNU enscript 1.6.4
+%%CreationDate: Fri Jan 17 18:42:06 2014
+%%Orientation: Portrait
+%%Pages: (atend)
+%%DocumentMedia: Letter 612 792 0 () ()
+%%DocumentNeededResources: (atend)
+%%EndComments
+%%BeginProlog
+%%BeginResource: procset Enscript-Prolog 1.6 4
+%
+% Procedures.
+%
+
+/_S {	% save current state
+  /_s save def
+} def
+/_R {	% restore from saved state
+  _s restore
+} def
+
+/S {	% showpage protecting gstate
+  gsave
+  showpage
+  grestore
+} bind def
+
+/MF {	% fontname newfontname -> -	make a new encoded font
+  /newfontname exch def
+  /fontname exch def
+
+  /fontdict fontname findfont def
+  /newfont fontdict maxlength dict def
+
+  fontdict {
+    exch
+    dup /FID eq {
+      % skip FID pair
+      pop pop
+    } {
+      % copy to the new font dictionary
+      exch newfont 3 1 roll put
+    } ifelse
+  } forall
+
+  newfont /FontName newfontname put
+
+  % insert only valid encoding vectors
+  encoding_vector length 256 eq {
+    newfont /Encoding encoding_vector put
+  } if
+
+  newfontname newfont definefont pop
+} def
+
+/MF_PS { % fontname newfontname -> -	make a new font preserving its enc
+  /newfontname exch def
+  /fontname exch def
+
+  /fontdict fontname findfont def
+  /newfont fontdict maxlength dict def
+
+  fontdict {
+    exch
+    dup /FID eq {
+      % skip FID pair
+      pop pop
+    } {
+      % copy to the new font dictionary
+      exch newfont 3 1 roll put
+    } ifelse
+  } forall
+
+  newfont /FontName newfontname put
+
+  newfontname newfont definefont pop
+} def
+
+/SF { % fontname width height -> -	set a new font
+  /height exch def
+  /width exch def
+
+  findfont
+  [width 0 0 height 0 0] makefont setfont
+} def
+
+/SUF { % fontname width height -> -	set a new user font
+  /height exch def
+  /width exch def
+
+  /F-gs-user-font MF
+  /F-gs-user-font width height SF
+} def
+
+/SUF_PS { % fontname width height -> -	set a new user font preserving its enc
+  /height exch def
+  /width exch def
+
+  /F-gs-user-font MF_PS
+  /F-gs-user-font width height SF
+} def
+
+/M {moveto} bind def
+/s {show} bind def
+
+/Box {	% x y w h -> -			define box path
+  /d_h exch def /d_w exch def /d_y exch def /d_x exch def
+  d_x d_y  moveto
+  d_w 0 rlineto
+  0 d_h rlineto
+  d_w neg 0 rlineto
+  closepath
+} def
+
+/bgs {	% x y height blskip gray str -> -	show string with bg color
+  /str exch def
+  /gray exch def
+  /blskip exch def
+  /height exch def
+  /y exch def
+  /x exch def
+
+  gsave
+    x y blskip sub str stringwidth pop height Box
+    gray setgray
+    fill
+  grestore
+  x y M str s
+} def
+
+/bgcs { % x y height blskip red green blue str -> -  show string with bg color
+  /str exch def
+  /blue exch def
+  /green exch def
+  /red exch def
+  /blskip exch def
+  /height exch def
+  /y exch def
+  /x exch def
+
+  gsave
+    x y blskip sub str stringwidth pop height Box
+    red green blue setrgbcolor
+    fill
+  grestore
+  x y M str s
+} def
+
+% Highlight bars.
+/highlight_bars {	% nlines lineheight output_y_margin gray -> -
+  gsave
+    setgray
+    /ymarg exch def
+    /lineheight exch def
+    /nlines exch def
+
+    % This 2 is just a magic number to sync highlight lines to text.
+    0 d_header_y ymarg sub 2 sub translate
+
+    /cw d_output_w cols div def
+    /nrows d_output_h ymarg 2 mul sub lineheight div cvi def
+
+    % for each column
+    0 1 cols 1 sub {
+      cw mul /xp exch def
+
+      % for each rows
+      0 1 nrows 1 sub {
+        /rn exch def
+        rn lineheight mul neg /yp exch def
+        rn nlines idiv 2 mod 0 eq {
+	  % Draw highlight bar.  4 is just a magic indentation.
+	  xp 4 add yp cw 8 sub lineheight neg Box fill
+	} if
+      } for
+    } for
+
+  grestore
+} def
+
+% Line highlight bar.
+/line_highlight {	% x y width height gray -> -
+  gsave
+    /gray exch def
+    Box gray setgray fill
+  grestore
+} def
+
+% Column separator lines.
+/column_lines {
+  gsave
+    .1 setlinewidth
+    0 d_footer_h translate
+    /cw d_output_w cols div def
+    1 1 cols 1 sub {
+      cw mul 0 moveto
+      0 d_output_h rlineto stroke
+    } for
+  grestore
+} def
+
+% Column borders.
+/column_borders {
+  gsave
+    .1 setlinewidth
+    0 d_footer_h moveto
+    0 d_output_h rlineto
+    d_output_w 0 rlineto
+    0 d_output_h neg rlineto
+    closepath stroke
+  grestore
+} def
+
+% Do the actual underlay drawing
+/draw_underlay {
+  ul_style 0 eq {
+    ul_str true charpath stroke
+  } {
+    ul_str show
+  } ifelse
+} def
+
+% Underlay
+/underlay {	% - -> -
+  gsave
+    0 d_page_h translate
+    d_page_h neg d_page_w atan rotate
+
+    ul_gray setgray
+    ul_font setfont
+    /dw d_page_h dup mul d_page_w dup mul add sqrt def
+    ul_str stringwidth pop dw exch sub 2 div ul_h_ptsize -2 div moveto
+    draw_underlay
+  grestore
+} def
+
+/user_underlay {	% - -> -
+  gsave
+    ul_x ul_y translate
+    ul_angle rotate
+    ul_gray setgray
+    ul_font setfont
+    0 0 ul_h_ptsize 2 div sub moveto
+    draw_underlay
+  grestore
+} def
+
+% Page prefeed
+/page_prefeed {		% bool -> -
+  statusdict /prefeed known {
+    statusdict exch /prefeed exch put
+  } {
+    pop
+  } ifelse
+} def
+
+% Wrapped line markers
+/wrapped_line_mark {	% x y charwith charheight type -> -
+  /type exch def
+  /h exch def
+  /w exch def
+  /y exch def
+  /x exch def
+
+  type 2 eq {
+    % Black boxes (like TeX does)
+    gsave
+      0 setlinewidth
+      x w 4 div add y M
+      0 h rlineto w 2 div 0 rlineto 0 h neg rlineto
+      closepath fill
+    grestore
+  } {
+    type 3 eq {
+      % Small arrows
+      gsave
+        .2 setlinewidth
+        x w 2 div add y h 2 div add M
+        w 4 div 0 rlineto
+        x w 4 div add y lineto stroke
+
+        x w 4 div add w 8 div add y h 4 div add M
+        x w 4 div add y lineto
+	w 4 div h 8 div rlineto stroke
+      grestore
+    } {
+      % do nothing
+    } ifelse
+  } ifelse
+} def
+
+% EPSF import.
+
+/BeginEPSF {
+  /b4_Inc_state save def    		% Save state for cleanup
+  /dict_count countdictstack def	% Count objects on dict stack
+  /op_count count 1 sub def		% Count objects on operand stack
+  userdict begin
+  /showpage { } def
+  0 setgray 0 setlinecap
+  1 setlinewidth 0 setlinejoin
+  10 setmiterlimit [ ] 0 setdash newpath
+  /languagelevel where {
+    pop languagelevel
+    1 ne {
+      false setstrokeadjust false setoverprint
+    } if
+  } if
+} bind def
+
+/EndEPSF {
+  count op_count sub { pos } repeat	% Clean up stacks
+  countdictstack dict_count sub { end } repeat
+  b4_Inc_state restore
+} bind def
+
+% Check PostScript language level.
+/languagelevel where {
+  pop /gs_languagelevel languagelevel def
+} {
+  /gs_languagelevel 1 def
+} ifelse
+%%EndResource
+%%BeginResource: procset Enscript-Encoding-88591 1.6 4
+/encoding_vector [
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/space        	/exclam       	/quotedbl     	/numbersign   	
+/dollar       	/percent      	/ampersand    	/quoteright   	
+/parenleft    	/parenright   	/asterisk     	/plus         	
+/comma        	/hyphen       	/period       	/slash        	
+/zero         	/one          	/two          	/three        	
+/four         	/five         	/six          	/seven        	
+/eight        	/nine         	/colon        	/semicolon    	
+/less         	/equal        	/greater      	/question     	
+/at           	/A            	/B            	/C            	
+/D            	/E            	/F            	/G            	
+/H            	/I            	/J            	/K            	
+/L            	/M            	/N            	/O            	
+/P            	/Q            	/R            	/S            	
+/T            	/U            	/V            	/W            	
+/X            	/Y            	/Z            	/bracketleft  	
+/backslash    	/bracketright 	/asciicircum  	/underscore   	
+/quoteleft    	/a            	/b            	/c            	
+/d            	/e            	/f            	/g            	
+/h            	/i            	/j            	/k            	
+/l            	/m            	/n            	/o            	
+/p            	/q            	/r            	/s            	
+/t            	/u            	/v            	/w            	
+/x            	/y            	/z            	/braceleft    	
+/bar          	/braceright   	/tilde        	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/space        	/exclamdown   	/cent         	/sterling     	
+/currency     	/yen          	/brokenbar    	/section      	
+/dieresis     	/copyright    	/ordfeminine  	/guillemotleft	
+/logicalnot   	/hyphen       	/registered   	/macron       	
+/degree       	/plusminus    	/twosuperior  	/threesuperior	
+/acute        	/mu           	/paragraph    	/bullet       	
+/cedilla      	/onesuperior  	/ordmasculine 	/guillemotright	
+/onequarter   	/onehalf      	/threequarters	/questiondown 	
+/Agrave       	/Aacute       	/Acircumflex  	/Atilde       	
+/Adieresis    	/Aring        	/AE           	/Ccedilla     	
+/Egrave       	/Eacute       	/Ecircumflex  	/Edieresis    	
+/Igrave       	/Iacute       	/Icircumflex  	/Idieresis    	
+/Eth          	/Ntilde       	/Ograve       	/Oacute       	
+/Ocircumflex  	/Otilde       	/Odieresis    	/multiply     	
+/Oslash       	/Ugrave       	/Uacute       	/Ucircumflex  	
+/Udieresis    	/Yacute       	/Thorn        	/germandbls   	
+/agrave       	/aacute       	/acircumflex  	/atilde       	
+/adieresis    	/aring        	/ae           	/ccedilla     	
+/egrave       	/eacute       	/ecircumflex  	/edieresis    	
+/igrave       	/iacute       	/icircumflex  	/idieresis    	
+/eth          	/ntilde       	/ograve       	/oacute       	
+/ocircumflex  	/otilde       	/odieresis    	/divide       	
+/oslash       	/ugrave       	/uacute       	/ucircumflex  	
+/udieresis    	/yacute       	/thorn        	/ydieresis    	
+] def
+%%EndResource
+%%EndProlog
+%%BeginSetup
+%%IncludeResource: font Courier-Bold
+/HFpt_w 10 def
+/HFpt_h 10 def
+/Courier-Bold /HF-gs-font MF
+/HF /HF-gs-font findfont [HFpt_w 0 0 HFpt_h 0 0] makefont def
+/Courier-Bold /F-gs-font MF
+/F-gs-font 11 11 SF
+/#copies 1 def
+% Pagedevice definitions:
+gs_languagelevel 1 gt {
+  <<
+    /PageSize [612 792] 
+  >> setpagedevice
+} if
+%%BeginResource: procset Enscript-Header-enscript-mycolor 1.6 4
+%%IncludeResource: font Times-Bold
+%%IncludeResource: font Times-Roman
+
+% Fonts.
+/Times-Bold /HeaderFont-Bold MF
+/HeaderDateF /HeaderFont-Bold findfont 12 scalefont def
+
+/Times-Roman /HeaderFont-Times MF
+/HeaderHDRF /HeaderFont-Times findfont 14 scalefont def
+
+/HeaderPageNumF /Helvetica-Bold findfont 28.8 scalefont def
+/HeaderPageCountF /Helvetica-Bold findfont 18 scalefont def
+
+/do_header {	% print enscript header
+  gsave
+    d_header_x d_header_y translate
+
+    /dhw d_header_w 4 sub def
+
+    /linecolor {0 0 0 setrgbcolor} bind def  % line color
+    /txcolor   {0 0 0 setrgbcolor} bind def  % text color
+    /fncolor   {0 0 0 setrgbcolor} bind def  % filename line color
+
+    .5 setlinewidth
+
+    % line across bottom of the header area
+    linecolor
+    0 0 moveto dhw 0 lineto
+
+    % side boxes
+    /sbw d_header_h 2 mul def	% side box width
+
+    % left side box
+    0 0 sbw d_header_h Box
+    linecolor
+    stroke
+
+    % date/time in left box
+    txcolor
+    HeaderDateF setfont
+    moddatestr dup stringwidth pop sbw exch sub 2 div
+    d_header_h 2 div 2 add moveto show
+    modtimestr dup stringwidth pop sbw exch sub 2 div
+    d_header_h 5 div moveto show
+
+    % right side box
+    dhw sbw sub 0 sbw d_header_h Box
+    linecolor
+    stroke
+
+    % get width of pagecount
+    HeaderPageCountF setfont
+    pagecountstr stringwidth pop
+
+    txcolor
+    HeaderPageNumF setfont
+    pagenumstr stringwidth pop add  % add to width of pagecount
+    sbw exch sub 2 div dhw sbw sub add
+    d_header_h .2 mul moveto
+
+    pagenumstr show
+
+    HeaderPageCountF setfont
+    pagecountstr show
+
+    % filename
+    fncolor
+    HeaderHDRF setfont
+    dhw fname stringwidth pop sub 2 div d_header_h 8 div moveto
+    fname show
+
+    % user supplied header string.
+    user_header_p {
+      /h d_header_h 8 div 5 mul def
+
+      % HACK around a bug in enscript 1.6.0:
+      % for some reason this is getting set to "(null)" and
+      %
+      user_header_center_str (\(null\)) eq {
+        /user_header_center_str () def
+      } if
+
+      % Implement strict enscript compatibility.
+      user_header_center_str () eq user_header_right_str () eq and {
+        dhw user_header_left_str stringwidth pop sub 2 div
+        h moveto user_header_left_str show
+      } {
+        sbw 5 add h moveto user_header_left_str show
+
+        dhw user_header_center_str stringwidth pop sub 2 div
+        h moveto user_header_center_str show
+
+	dhw sbw sub 5 sub user_header_right_str stringwidth pop
+	sub h moveto user_header_right_str show
+      } ifelse
+    } if
+
+  grestore
+} bind def
+%%EndResource
+/d_page_w 536 def
+/d_page_h 744 def
+/d_header_x 0 def
+/d_header_y 708 def
+/d_header_w 536 def
+/d_header_h 36 def
+/d_footer_x 0 def
+/d_footer_y 0 def
+/d_footer_w 536 def
+/d_footer_h 0 def
+/d_output_w 536 def
+/d_output_h 708 def
+/cols 1 def
+%%EndSetup
+%%Page: (1) 1
+%%BeginPageSetup
+_S
+38 24 translate
+/pagenum 1 def
+/fname (in0.hello.rf.out) def
+/fdir () def
+/ftail (in0.hello.rf.out) def
+% User defined strings:
+/pagenumstr (1) def
+/moddatestr (01/17/14) def
+/pagecountstr (/1) def
+/modtimestr (18:42:06) def
+/user_header_p true def
+/user_header_left_str ($cmps012b-wm/Assignments/asg2j-jroff-queue/example-output/) def
+/user_header_center_str () def
+/user_header_right_str () def
+/user_footer_p false def
+%%EndPageSetup
+column_borders
+do_header
+5 658 M
+(                                                                          1) s
+5 622 M
+(          $Id: in0.hello.rf,v 1.1 2011-04-08 17:21:44-07 - - $) s
+5 598 M
+(          Hello, World!  This is a simple test of `jroff'.) s
+_R
+S
+%%Page: (1) 2
+%%BeginPageSetup
+_S
+38 24 translate
+/pagenum 1 def
+/fname (in1.simple.rf.out) def
+/fdir () def
+/ftail (in1.simple.rf.out) def
+% User defined strings:
+/pagenumstr (1) def
+/moddatestr (01/17/14) def
+/pagecountstr (/1) def
+/modtimestr (18:42:06) def
+/user_header_p true def
+/user_header_left_str ($cmps012b-wm/Assignments/asg2j-jroff-queue/example-output/) def
+/user_header_center_str () def
+/user_header_right_str () def
+/user_footer_p false def
+%%EndPageSetup
+column_borders
+do_header
+5 658 M
+(                                                                          1) s
+5 622 M
+(          This is a very simple example of some text that should be) s
+5 610 M
+(          formatted.  As the lines are fetched form the input, the output) s
+5 598 M
+(          lines are adjusted so that each line is approximately the same) s
+5 586 M
+(          length.) s
+5 562 M
+(          Note that a blank line produces a paragraph break.  So we can) s
+5 550 M
+(          easily use this as a primitiver formatter just like fmt\(1\), even) s
+5 538 M
+(          if we don't want to do anything complicated.) s
+5 514 M
+(          The present assignment does not require that any line) s
+5 502 M
+(          justification be given.  Neither need any fancy PostScript) s
+5 490 M
+(          formatting output be done.  Note that there is one space between) s
+5 478 M
+(          words except when a word ends a sentence.  A sentence ends when) s
+5 466 M
+(          the word ends with one of the following punctuation marks:  ?!;:.) s
+5 442 M
+(          Many text formatters also allow for both right justification) s
+5 430 M
+(          rather than ragged right typesetting and also for hyphenation.) s
+5 418 M
+(          We do not require that here.  Also not that while sentence-ending) s
+5 406 M
+(          punctuation works, abbreviations ending with periods are treated) s
+5 394 M
+(          as ending sentences, which is not quite right.  And if we're not) s
+5 382 M
+(          careful in formatting things, very-long-words-which-appear-in-) s
+5 370 M
+(          the-wrong place can cause funny-looking line-breaking.) s
+5 346 M
+(          $Id: in1.simple.rf,v 1.1 2011-04-08 17:21:44-07 - - $) s
+_R
+S
+%%Page: (1) 3
+%%BeginPageSetup
+_S
+38 24 translate
+/pagenum 1 def
+/fname (in2.paragraph.rf.out) def
+/fdir () def
+/ftail (in2.paragraph.rf.out) def
+% User defined strings:
+/pagenumstr (1) def
+/moddatestr (01/17/14) def
+/pagecountstr (/1) def
+/modtimestr (18:42:06) def
+/user_header_p true def
+/user_header_left_str ($cmps012b-wm/Assignments/asg2j-jroff-queue/example-output/) def
+/user_header_center_str () def
+/user_header_right_str () def
+/user_footer_p false def
+%%EndPageSetup
+column_borders
+do_header
+5 658 M
+(                                                                          1) s
+5 622 M
+(          Note that some) s
+5 610 M
+(          paragraphs are very) s
+5 598 M
+(          narrow and look) s
+5 586 M
+(          funny.  It is even) s
+5 574 M
+(          possible to make) s
+5 562 M
+(          them very very) s
+5 550 M
+(          narrow.) s
+5 526 M
+(          Now we) s
+5 514 M
+(          can't get) s
+5 502 M
+(          much more) s
+5 490 M
+(          than one) s
+5 478 M
+(          word per) s
+5 466 M
+(          line.) s
+5 394 M
+(          There should be five blank lines above this line.  And this) s
+5 382 M
+(          paragraph should be about 60 characters wide.  If we want to) s
+5 370 M
+(          make an indented quotation, we need to use both the .ll and) s
+5 358 M
+(          the .in commands.) s
+5 334 M
+(                    This is a paragraph that is indented at) s
+5 322 M
+(                    both ends.  This is a paragraph that is) s
+5 310 M
+(                    indented at both ends.  This is a) s
+5 298 M
+(                    paragraph that is indented at both ends.) s
+5 286 M
+(                    This is a paragraph that is indented at) s
+5 274 M
+(                    both ends.  This is a paragraph that is) s
+5 262 M
+(                    indented at both ends.  This is a) s
+5 250 M
+(                    paragraph that is indented at both ends.) s
+5 226 M
+(          This paragraph is not indented and has a line width of 60) s
+5 214 M
+(          characters.  This paragraph is not indented and has a line) s
+5 202 M
+(          width of 60 characters.  This paragraph is not indented and) s
+5 190 M
+(          has a line width of 60 characters.  This paragraph is not) s
+5 178 M
+(          indented and has a line width of 60 characters.  This) s
+5 166 M
+(          paragraph is not indented and has a line width of 60) s
+5 154 M
+(          characters.) s
+5 130 M
+(          $Id: in2.paragraph.rf,v 1.1 2011-04-08 17:21:44-07 - - $) s
+_R
+S
+%%Page: (1) 4
+%%BeginPageSetup
+_S
+38 24 translate
+/pagenum 1 def
+/fname (in4.longer.rf.out) def
+/fdir () def
+/ftail (in4.longer.rf.out) def
+% User defined strings:
+/pagenumstr (1) def
+/moddatestr (01/17/14) def
+/pagecountstr (/4) def
+/modtimestr (18:42:06) def
+/user_header_p true def
+/user_header_left_str ($cmps012b-wm/Assignments/asg2j-jroff-queue/example-output/) def
+/user_header_center_str () def
+/user_header_right_str () def
+/user_footer_p false def
+%%EndPageSetup
+column_borders
+do_header
+5 658 M
+(                                                                1) s
+5 622 M
+(This document has a page length of 20 lines and so should produce) s
+5 610 M
+(several pages.  Note the page eject after the first para.) s
+5 586 M
+(This is a very simple example of some text that should be) s
+5 574 M
+(formatted.  As the lines are fetched form the input, the output) s
+5 562 M
+(lines are adjusted so that each line is approximately the same) s
+5 550 M
+(length.) s
+_R
+S
+%%Page: (2) 5
+%%BeginPageSetup
+_S
+38 24 translate
+/pagenum 2 def
+/fname (in4.longer.rf.out) def
+/fdir () def
+/ftail (in4.longer.rf.out) def
+% User defined strings:
+/pagenumstr (2) def
+/moddatestr (01/17/14) def
+/pagecountstr (/4) def
+/modtimestr (18:42:06) def
+/user_header_p true def
+/user_header_left_str ($cmps012b-wm/Assignments/asg2j-jroff-queue/example-output/) def
+/user_header_center_str () def
+/user_header_right_str () def
+/user_footer_p false def
+%%EndPageSetup
+column_borders
+do_header
+5 658 M
+(                                                                2) s
+5 610 M
+(Note that a blank line produces a paragraph break.  So we can) s
+5 598 M
+(easily use this as a primitiver formatter just like fmt\(1\), even) s
+5 586 M
+(if we don't want to do anything complicated.) s
+5 562 M
+(The present assignment does not require that any line) s
+5 550 M
+(justification be given.  Neither need any fancy PostScript) s
+5 538 M
+(formatting output be done.  Note that there is one space between) s
+5 526 M
+(words except when a word ends a sentence.  A sentence ends when) s
+5 514 M
+(the word ends with one of the following punctuation marks:  ?!;:.) s
+5 490 M
+(Many text formatters also allow for both right justification) s
+5 478 M
+(rather than ragged right typesetting and also for hyphenation.) s
+5 466 M
+(We do not require that here.  Also not that while sentence-ending) s
+5 454 M
+(punctuation works, abbreviations ending with periods are treated) s
+5 442 M
+(as ending sentences, which is not quite right.  And if we're not) s
+5 430 M
+(careful in formatting things, very-long-words-which-appear-in-) s
+5 418 M
+(the-wrong place can cause funny-looking line-breaking.) s
+5 394 M
+($Id: in4.longer.rf,v 1.1 2011-04-08 17:21:44-07 - - $) s
+5 370 M
+(This is a very simple example of some text that should be) s
+5 358 M
+(formatted.  As the lines are fetched form the input, the output) s
+5 346 M
+(lines are adjusted so that each line is approximately the same) s
+5 334 M
+(length.) s
+5 310 M
+(Note that a blank line produces a paragraph break.  So we can) s
+5 298 M
+(easily use this as a primitiver formatter just like fmt\(1\), even) s
+5 286 M
+(if we don't want to do anything complicated.) s
+5 262 M
+(The present assignment does not require that any line) s
+5 250 M
+(justification be given.  Neither need any fancy PostScript) s
+5 238 M
+(formatting output be done.  Note that there is one space between) s
+5 226 M
+(words except when a word ends a sentence.  A sentence ends when) s
+5 214 M
+(the word ends with one of the following punctuation marks:  ?!;:.) s
+5 190 M
+(Many text formatters also allow for both right justification) s
+5 178 M
+(rather than ragged right typesetting and also for hyphenation.) s
+5 166 M
+(We do not require that here.  Also not that while sentence-ending) s
+5 154 M
+(punctuation works, abbreviations ending with periods are treated) s
+5 142 M
+(as ending sentences, which is not quite right.  And if we're not) s
+5 130 M
+(careful in formatting things, very-long-words-which-appear-in-) s
+5 118 M
+(the-wrong place can cause funny-looking line-breaking.) s
+_R
+S
+%%Page: (3) 6
+%%BeginPageSetup
+_S
+38 24 translate
+/pagenum 3 def
+/fname (in4.longer.rf.out) def
+/fdir () def
+/ftail (in4.longer.rf.out) def
+% User defined strings:
+/pagenumstr (3) def
+/moddatestr (01/17/14) def
+/pagecountstr (/4) def
+/modtimestr (18:42:06) def
+/user_header_p true def
+/user_header_left_str ($cmps012b-wm/Assignments/asg2j-jroff-queue/example-output/) def
+/user_header_center_str () def
+/user_header_right_str () def
+/user_footer_p false def
+%%EndPageSetup
+column_borders
+do_header
+5 658 M
+(                                                                3) s
+5 622 M
+($Id: in4.longer.rf,v 1.1 2011-04-08 17:21:44-07 - - $) s
+5 598 M
+(This is a very simple example of some text that should be) s
+5 586 M
+(formatted.  As the lines are fetched form the input, the output) s
+5 574 M
+(lines are adjusted so that each line is approximately the same) s
+5 562 M
+(length.) s
+5 538 M
+(Note that a blank line produces a paragraph break.  So we can) s
+5 526 M
+(easily use this as a primitiver formatter just like fmt\(1\), even) s
+5 514 M
+(if we don't want to do anything complicated.) s
+5 490 M
+(The present assignment does not require that any line) s
+5 478 M
+(justification be given.  Neither need any fancy PostScript) s
+5 466 M
+(formatting output be done.  Note that there is one space between) s
+5 454 M
+(words except when a word ends a sentence.  A sentence ends when) s
+5 442 M
+(the word ends with one of the following punctuation marks:  ?!;:.) s
+5 418 M
+(Many text formatters also allow for both right justification) s
+5 406 M
+(rather than ragged right typesetting and also for hyphenation.) s
+5 394 M
+(We do not require that here.  Also not that while sentence-ending) s
+5 382 M
+(punctuation works, abbreviations ending with periods are treated) s
+5 370 M
+(as ending sentences, which is not quite right.  And if we're not) s
+5 358 M
+(careful in formatting things, very-long-words-which-appear-in-) s
+5 346 M
+(the-wrong place can cause funny-looking line-breaking.) s
+5 322 M
+($Id: in4.longer.rf,v 1.1 2011-04-08 17:21:44-07 - - $) s
+5 298 M
+(This is a very simple example of some text that should be) s
+5 286 M
+(formatted.  As the lines are fetched form the input, the output) s
+5 274 M
+(lines are adjusted so that each line is approximately the same) s
+5 262 M
+(length.) s
+5 238 M
+(Note that a blank line produces a paragraph break.  So we can) s
+5 226 M
+(easily use this as a primitiver formatter just like fmt\(1\), even) s
+5 214 M
+(if we don't want to do anything complicated.) s
+5 190 M
+(The present assignment does not require that any line) s
+5 178 M
+(justification be given.  Neither need any fancy PostScript) s
+5 166 M
+(formatting output be done.  Note that there is one space between) s
+5 154 M
+(words except when a word ends a sentence.  A sentence ends when) s
+5 142 M
+(the word ends with one of the following punctuation marks:  ?!;:.) s
+5 118 M
+(Many text formatters also allow for both right justification) s
+5 106 M
+(rather) s
+_R
+S
+%%Page: (4) 7
+%%BeginPageSetup
+_S
+38 24 translate
+/pagenum 4 def
+/fname (in4.longer.rf.out) def
+/fdir () def
+/ftail (in4.longer.rf.out) def
+% User defined strings:
+/pagenumstr (4) def
+/moddatestr (01/17/14) def
+/pagecountstr (/4) def
+/modtimestr (18:42:06) def
+/user_header_p true def
+/user_header_left_str ($cmps012b-wm/Assignments/asg2j-jroff-queue/example-output/) def
+/user_header_center_str () def
+/user_header_right_str () def
+/user_footer_p false def
+%%EndPageSetup
+column_borders
+do_header
+5 658 M
+(                                                                4) s
+5 622 M
+(than ragged right typesetting and also for hyphenation.  We do) s
+5 610 M
+(not require that here.  Also not that while sentence-ending) s
+5 598 M
+(punctuation works, abbreviations ending with periods are treated) s
+5 586 M
+(as ending sentences, which is not quite right.  And if we're not) s
+5 574 M
+(careful in formatting things, very-long-words-which-appear-in-) s
+5 562 M
+(the-wrong place can cause funny-looking line-breaking.) s
+5 538 M
+($Id: in4.longer.rf,v 1.1 2011-04-08 17:21:44-07 - - $) s
+_R
+S
+%%Page: (1) 8
+%%BeginPageSetup
+_S
+38 24 translate
+/pagenum 1 def
+/fname (in5.badcmds.rf.out) def
+/fdir () def
+/ftail (in5.badcmds.rf.out) def
+% User defined strings:
+/pagenumstr (1) def
+/moddatestr (01/17/14) def
+/pagecountstr (/1) def
+/modtimestr (18:42:06) def
+/user_header_p true def
+/user_header_left_str ($cmps012b-wm/Assignments/asg2j-jroff-queue/example-output/) def
+/user_header_center_str () def
+/user_header_right_str () def
+/user_footer_p false def
+%%EndPageSetup
+column_borders
+do_header
+5 658 M
+(                                                                          1) s
+5 622 M
+(          Thisisaverylonglinewhichcannotbebrokenandyouwillgetanerrormessageabou) s
+5 610 M
+(t``can'tbreakline''.) s
+5 598 M
+(          The message should be something like ZZ) s
+5 538 M
+(          $Id: in5.badcmds.rf,v 1.1 2011-04-08 17:21:44-07 - - $) s
+_R
+S
+%%Page: (1) 9
+%%BeginPageSetup
+_S
+38 24 translate
+/pagenum 1 def
+/fname (in6.jroff.rf.out) def
+/fdir () def
+/ftail (in6.jroff.rf.out) def
+% User defined strings:
+/pagenumstr (1) def
+/moddatestr (01/17/14) def
+/pagecountstr (/4) def
+/modtimestr (18:42:06) def
+/user_header_p true def
+/user_header_left_str ($cmps012b-wm/Assignments/asg2j-jroff-queue/example-output/) def
+/user_header_center_str () def
+/user_header_right_str () def
+/user_footer_p false def
+%%EndPageSetup
+column_borders
+do_header
+5 658 M
+(                                                                          1) s
+5 622 M
+(          NAME) s
+5 598 M
+(              jroff - format documents for display on line printer) s
+5 574 M
+(          SYNOPSIS) s
+5 550 M
+(              jroff [filename...]) s
+5 526 M
+(          DESCRIPTION) s
+5 502 M
+(              `jroff' formats text according to control lines embedded in) s
+5 490 M
+(              the text of the given input files.  Control lines begin with) s
+5 478 M
+(              a period \(.\) in column 1 and all other lines are text lines) s
+5 466 M
+(              to be formatted.  Paragraphs are delimited by empty lines or) s
+5 454 M
+(              control lines.) s
+5 430 M
+(          OPTIONS) s
+5 406 M
+(              None.) s
+5 382 M
+(          OPERANDS) s
+5 358 M
+(              All operands are filenames.  Each file is read in turn as) s
+5 346 M
+(              input to the formatter.  If a filename is specified as a) s
+5 334 M
+(              minus sign \(-\), the standard input is read at that point.  If) s
+5 322 M
+(              no filenames are given, the standard input is read.  The) s
+5 310 M
+(              formatted document is written to the standard output.) s
+5 286 M
+(          EXIT STATUS) s
+5 262 M
+(              0) s
+5 250 M
+(                  No errors were encountered.) s
+5 238 M
+(              1) s
+5 226 M
+(                  One or more files were not found or invalid commands were) s
+5 214 M
+(                  found.  Error messages were written to the standard) s
+5 202 M
+(                  error.) s
+5 178 M
+(          SEE ALSO) s
+_R
+S
+%%Page: (2) 10
+%%BeginPageSetup
+_S
+38 24 translate
+/pagenum 2 def
+/fname (in6.jroff.rf.out) def
+/fdir () def
+/ftail (in6.jroff.rf.out) def
+% User defined strings:
+/pagenumstr (2) def
+/moddatestr (01/17/14) def
+/pagecountstr (/4) def
+/modtimestr (18:42:06) def
+/user_header_p true def
+/user_header_left_str ($cmps012b-wm/Assignments/asg2j-jroff-queue/example-output/) def
+/user_header_center_str () def
+/user_header_right_str () def
+/user_footer_p false def
+%%EndPageSetup
+column_borders
+do_header
+5 658 M
+(                                                                          2) s
+5 622 M
+(              fmt\(1\), nroff\(1\), groff\(1\), latex\(1\), tex\(1\).) s
+5 598 M
+(          INPUT TEXT) s
+5 574 M
+(              Input lines are of three types:  empty lines, which cause a) s
+5 562 M
+(              paragraph to be terminated and are equivalent to the `.sp') s
+5 550 M
+(              command;  text lines, which are added to the current) s
+5 538 M
+(              paragraph, and commands, which being with a period \(.\) in) s
+5 526 M
+(              column 1.  White space is ignored, except as separators.) s
+5 514 M
+(              Whenever a word of output is printed, it is followed by one) s
+5 502 M
+(              space unless it is at the end of a sentence.  A word is at) s
+5 490 M
+(              the end of a sentence if its last character is one of the) s
+5 478 M
+(              characters period \(.\), question \(?\), bang \(!\), colon\(:\), or) s
+5 466 M
+(              semi-colon \(;\).) s
+5 442 M
+(          COMMANDS) s
+5 418 M
+(              The following commands are recognized.  Whenever an operand) s
+5 406 M
+(              of `N' is specified on a command, the operand must be) s
+5 394 M
+(              numeric, and if missing, the default value is used.  `C') s
+5 382 M
+(              indicates a single character operand.) s
+5 358 M
+(              .\\" anything) s
+5 346 M
+(                  `jroff' comments are ignored and are useful for private) s
+5 334 M
+(                  documentation purposes.) s
+5 310 M
+(              .bp) s
+5 298 M
+(                  Begin page, causing a break.  Write a form feed \(^L\)) s
+5 286 M
+(                  character immediately before printing the page header for) s
+5 274 M
+(                  the next page.  When the next paragraph is dumped, The) s
+5 262 M
+(                  page title will be printed when the next line after this) s
+5 250 M
+(                  is printed.) s
+5 226 M
+(              .br) s
+5 214 M
+(                  Break.  The paragraph is dumped and a new paragraph is) s
+5 202 M
+(                  begun.  There is no empty line between paragraphs.  Same) s
+5 190 M
+(                  as `.sp 0'.) s
+_R
+S
+%%Page: (3) 11
+%%BeginPageSetup
+_S
+38 24 translate
+/pagenum 3 def
+/fname (in6.jroff.rf.out) def
+/fdir () def
+/ftail (in6.jroff.rf.out) def
+% User defined strings:
+/pagenumstr (3) def
+/moddatestr (01/17/14) def
+/pagecountstr (/4) def
+/modtimestr (18:42:06) def
+/user_header_p true def
+/user_header_left_str ($cmps012b-wm/Assignments/asg2j-jroff-queue/example-output/) def
+/user_header_center_str () def
+/user_header_right_str () def
+/user_footer_p false def
+%%EndPageSetup
+column_borders
+do_header
+5 658 M
+(                                                                          3) s
+5 622 M
+(              .cc C) s
+5 610 M
+(                  Sets the control character to C.  The control character) s
+5 598 M
+(                  is that which appears in position 0 of the input line to) s
+5 586 M
+(                  signal a command.  Default:  `.'.) s
+5 562 M
+(              .in N) s
+5 550 M
+(                  Set the indentation to N characters.  This is the number) s
+5 538 M
+(                  of spaces printed at the beginning of each line in) s
+5 526 M
+(                  addition to the page offset.  Also causes a break \(.br\).) s
+5 514 M
+(                  Default:  0.) s
+5 490 M
+(              .ll N) s
+5 478 M
+(                  Set output line length to N characters.  The indentation) s
+5 466 M
+(                  is included in this, but not the page offset.  Default:) s
+5 454 M
+(                  65.) s
+5 430 M
+(              .mt N) s
+5 418 M
+(                  Specifies the margin at the top of the page in lines.) s
+5 406 M
+(                  The title is vertically centered in this margin.  N/2) s
+5 394 M
+(                  empty lines are printed, then the title, then N/2-1 empty) s
+5 382 M
+(                  lines.  Default:  0.) s
+5 358 M
+(              .tl 'left'mid'right') s
+5 346 M
+(                  A three part page header may be specified for the left,) s
+5 334 M
+(                  middle, and right side of the page.  If a percent \(%\)) s
+5 322 M
+(                  appears anywhere in the title, it is replaced by a page) s
+5 310 M
+(                  number.  The left part is left justified within the) s
+5 298 M
+(                  output line, the right part is right justified, and the) s
+5 286 M
+(                  mid part is centered one the entire output line.) s
+5 274 M
+(                  Default:) s
+5 250 M
+(              .pl N) s
+5 238 M
+(                  Set the page length to N lines.  Whever this many lines) s
+5 226 M
+(                  have been output, a page eject occurs, and the page) s
+5 214 M
+(                  header is printed immediately before printing the next) s
+5 202 M
+(                  line of text.  Default:  60.) s
+5 178 M
+(              .po N) s
+_R
+S
+%%Page: (4) 12
+%%BeginPageSetup
+_S
+38 24 translate
+/pagenum 4 def
+/fname (in6.jroff.rf.out) def
+/fdir () def
+/ftail (in6.jroff.rf.out) def
+% User defined strings:
+/pagenumstr (4) def
+/moddatestr (01/17/14) def
+/pagecountstr (/4) def
+/modtimestr (18:42:06) def
+/user_header_p true def
+/user_header_left_str ($cmps012b-wm/Assignments/asg2j-jroff-queue/example-output/) def
+/user_header_center_str () def
+/user_header_right_str () def
+/user_footer_p false def
+%%EndPageSetup
+column_borders
+do_header
+5 658 M
+(                                                                          4) s
+5 622 M
+(                  Page offset is N characters.  This is the number of space) s
+5 610 M
+(                  characters printed at the beginning of every output line.) s
+5 598 M
+(                  No characters are printed if the line is empty.  Default:) s
+5 586 M
+(                  10.) s
+5 562 M
+(              .sp N) s
+5 550 M
+(                  End a paragraph and print N blank lines.  Each blank) s
+5 538 M
+(                  input line is the same as `.sp 1'.  If N is more than the) s
+5 526 M
+(                  number of output lines left on the current page, behaves) s
+5 514 M
+(                  exactly like `.bp'.  Default:  1.) s
+5 478 M
+(          SEE ALSO) s
+5 454 M
+(              nroff\(1\), groff\(1\), latex\(1\), tex\(1\).) s
+5 430 M
+(          BUGS) s
+5 406 M
+(              Very few commands have been implemented, the most serious) s
+5 394 M
+(              being the lack of a macro preprocessor in order to make) s
+5 382 M
+(              typing in the markup language less tedious.) s
+5 358 M
+(          RCSID) s
+5 334 M
+(              $Id: in6.jroff.rf,v 1.1 2011-04-08 17:21:44-07 - - $) s
+_R
+S
+%%Trailer
+%%Pages: 12
+%%DocumentNeededResources: font Times-Roman Courier-Bold Times-Bold 
+%%EOF

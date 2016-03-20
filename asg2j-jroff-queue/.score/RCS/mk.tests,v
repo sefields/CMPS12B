@@ -1,0 +1,117 @@
+head	1.4;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.4
+date	2014.01.18.02.03.29;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2014.01.18.01.57.11;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2014.01.18.01.44.45;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2011.01.21.05.13.54;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.4
+log
+@-
+@
+text
+@#!/bin/sh
+# $Id: mk.tests,v 1.3 2014-01-17 17:57:11-08 - - $
+
+export PATH=$PATH:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin
+PROG=jroff
+
+function runtest {
+   test=$1
+   shift
+   echo $0: Running $PROG "$@@"
+   $PROG "$@@" >$test.out 2>$test.err
+   echo status = $? >$test.status
+   ls -goa test.$test.*
+}
+
+runtest test0.hello.rf     in0.hello.rf
+runtest test1.simple.rf    in1.simple.rf
+runtest test2.paragraph.rf in2.paragraph.rf
+runtest test4.longer.rf    in4.longer.rf
+runtest test5.badcmds.rf   in5.badcmds.rf
+runtest test6.jroff.rf     in6.jroff.rf
+runtest test7.all          *.rf
+runtest test8.badfiles     /dev/null foo bar baz
+
+@
+
+
+1.3
+log
+@-
+@
+text
+@d2 1
+a2 1
+# $Id: mk.tests,v 1.2 2014-01-17 17:44:45-08 - - $
+d11 2
+a12 2
+   $PROG "$@@" >test.$test.out 2>test.$test.err
+   echo status = $? >test.$test.status
+@
+
+
+1.2
+log
+@-
+@
+text
+@d2 1
+a2 1
+# $Id: mk.tests,v 1.1 2011-01-20 21:13:54-08 - - $
+a18 1
+runtest test3.titles.rf    in3.titles.rf
+@
+
+
+1.1
+log
+@-
+@
+text
+@d2 1
+a2 1
+# $Id: mk.tests,v 1.2 2010-01-20 13:08:34-08 - - $
+d4 1
+a4 3
+PATH=$PATH:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin
+export PATH
+RUN=runprogram.perl
+d7 18
+a24 9
+$RUN -otest0.hello.rf     $PROG in0.hello.rf
+$RUN -otest1.simple.rf    $PROG in1.simple.rf
+$RUN -otest2.paragraph.rf $PROG in2.paragraph.rf
+$RUN -otest3.titles.rf    $PROG in3.titles.rf
+$RUN -otest4.longer.rf    $PROG in4.longer.rf
+$RUN -otest5.badcmds.rf   $PROG in5.badcmds.rf
+$RUN -otest6.jroff.rf     $PROG in6.jroff.rf
+$RUN -otest7.all          $PROG *.rf
+$RUN -otest8.badfiles     $PROG /dev/null foo bar baz
+@

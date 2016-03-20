@@ -1,0 +1,296 @@
+head	1.12;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.12
+date	2014.01.18.02.42.06;	author -;	state -;
+branches;
+next	1.11;
+
+1.11
+date	2014.01.18.02.35.38;	author -;	state -;
+branches;
+next	1.10;
+
+1.10
+date	2014.01.18.02.34.34;	author -;	state -;
+branches;
+next	1.9;
+
+1.9
+date	2014.01.18.02.32.26;	author -;	state -;
+branches;
+next	1.8;
+
+1.8
+date	2014.01.18.02.31.42;	author -;	state -;
+branches;
+next	1.7;
+
+1.7
+date	2014.01.18.02.18.33;	author -;	state -;
+branches;
+next	1.6;
+
+1.6
+date	2014.01.18.02.17.48;	author -;	state -;
+branches;
+next	1.5;
+
+1.5
+date	2014.01.18.02.12.00;	author -;	state -;
+branches;
+next	1.4;
+
+1.4
+date	2014.01.18.01.52.33;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2014.01.11.01.46.12;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2011.01.21.05.16.49;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2011.01.21.05.15.35;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.12
+log
+@-
+@
+text
+@#!/bin/bash
+# $Id: mk.data,v 1.11 2014-01-17 18:35:38-08 - - $
+
+PROG=proff.perl
+DIR=../.score
+cid + $0 $PROG
+
+for file in $DIR/*.rf
+do
+   base=$(basename $file)
+   proff.perl $file >$base.out 2>$base.err
+done
+
+mkpspdf -c files-input.ps $DIR/*.rf
+mkpspdf -c files-output.ps *.out
+mkpspdf files-scripts.ps $DIR/mk.* $0 proff.perl
+
+@
+
+
+1.11
+log
+@-
+@
+text
+@d2 1
+a2 1
+# $Id: mk.data,v 1.10 2014-01-17 18:34:34-08 - - $
+d16 1
+a16 1
+mkpspdf files-scripts $DIR/mk.* $0 proff.perl
+@
+
+
+1.10
+log
+@-
+@
+text
+@d2 1
+a2 1
+# $Id: mk.data,v 1.9 2014-01-17 18:32:26-08 - - $
+d16 1
+@
+
+
+1.9
+log
+@-
+@
+text
+@d2 1
+a2 1
+# $Id: mk.data,v 1.8 2014-01-17 18:31:42-08 - - $
+d14 3
+a16 2
+mkpspdf -c files-input $DIR/*.rf
+mkpspdf -c files-output *.out
+@
+
+
+1.8
+log
+@-
+@
+text
+@d2 1
+a2 1
+# $Id: mk.data,v 1.7 2014-01-17 18:18:33-08 - - $
+d14 2
+a15 2
+mkpspdf files-input $DIR/*.rf
+mkpspdf files-output *.out
+@
+
+
+1.7
+log
+@-
+@
+text
+@d2 1
+a2 1
+# $Id: mk.data,v 1.6 2014-01-17 18:17:48-08 - - $
+d14 2
+@
+
+
+1.6
+log
+@-
+@
+text
+@d2 1
+a2 1
+# $Id: mk.data,v 1.5 2014-01-17 18:12:00-08 - - $
+d10 2
+a11 1
+   proff.perl $file >$(basename $file).out
+@
+
+
+1.5
+log
+@-
+@
+text
+@d2 1
+a2 1
+# $Id: mk.data,v 1.4 2014-01-17 17:52:33-08 - - $
+d10 1
+a10 1
+   proff.perl $file >$file.out
+a12 3
+mkpspdf inputfiles.ps $DIR/*.rf
+mkpspdf outputfiles.ps $DIR/*.rf
+
+@
+
+
+1.4
+log
+@-
+@
+text
+@d2 1
+a2 1
+# $Id: mk.data,v 1.3 2014-01-10 17:46:12-08 - - $
+a3 1
+export PATH=$PATH:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin
+d6 1
+d8 4
+a11 8
+function runtest {
+   test=$1
+   shift
+   echo $0: Running $PROG "$@@"
+   $PROG "$@@" >test.$test.out 2>test.$test.err
+   echo status = $? >test.$test.status
+   ls -goa test.$test.*
+}
+d13 2
+a14 9
+runtest test0.hello.rf     $DIR/in0.hello.rf
+runtest test1.simple.rf    $DIR/in1.simple.rf
+runtest test2.paragraph.rf $DIR/in2.paragraph.rf
+runtest test3.titles.rf    $DIR/in3.titles.rf
+runtest test4.longer.rf    $DIR/in4.longer.rf
+runtest test5.badcmds.rf   $DIR/in5.badcmds.rf
+runtest test6.jroff.rf     $DIR/in6.jroff.rf
+runtest test7.all          $DIR/*.rf
+runtest test8.badfiles     /dev/null foo bar baz
+a15 2
+proff.perl jroff.rf >jroff.out
+mkpspdf -c ../jroff.specs.tt.ps jroff.out proff.perl
+@
+
+
+1.3
+log
+@-
+@
+text
+@d2 1
+a2 1
+# $Id: mk.data,v 1.2 2011-01-20 21:16:49-08 - - $
+d6 1
+d28 1
+a28 1
+mkpspdf ../jroff.specs.tt.ps jroff.out proff.perl
+@
+
+
+1.2
+log
+@-
+@
+text
+@d1 2
+a2 2
+#!/bin/sh
+# $Id: mk.data,v 1.1 2011-01-20 21:15:35-08 - - $
+d4 1
+a4 3
+PATH=$PATH:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin
+export PATH
+RUN=runprogram.perl
+a5 1
+DIR=../.score
+d7 8
+a14 9
+$RUN -otest0.hello.rf     $PROG $DIR/in0.hello.rf
+$RUN -otest1.simple.rf    $PROG $DIR/in1.simple.rf
+$RUN -otest2.paragraph.rf $PROG $DIR/in2.paragraph.rf
+$RUN -otest3.titles.rf    $PROG $DIR/in3.titles.rf
+$RUN -otest4.longer.rf    $PROG $DIR/in4.longer.rf
+$RUN -otest5.badcmds.rf   $PROG $DIR/in5.badcmds.rf
+$RUN -otest6.jroff.rf     $PROG $DIR/in6.jroff.rf
+$RUN -otest7.all          $PROG $DIR/*.rf
+$RUN -otest8.badfiles     $PROG /dev/null foo bar baz
+d16 12
+a27 2
+$PROG jroff.rf >jroff.out
+mkpspdf ../jroff.specs.tt.ps jroff.out $PROG
+@
+
+
+1.1
+log
+@-
+@
+text
+@d2 1
+a2 1
+# $Id: mk.data,v 1.5 2010-01-20 13:48:31-08 - - $
+d21 1
+a21 1
+mkpspdf ../jroff.specs.tt.ps jroff.out
+@

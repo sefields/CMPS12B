@@ -1,0 +1,1511 @@
+head	1.58;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.58
+date	2014.02.06.09.33.53;	author -;	state -;
+branches;
+next	1.57;
+
+1.57
+date	2014.02.06.09.33.01;	author -;	state -;
+branches;
+next	1.56;
+
+1.56
+date	2014.02.06.09.32.03;	author -;	state -;
+branches;
+next	1.55;
+
+1.55
+date	2014.02.06.09.30.56;	author -;	state -;
+branches;
+next	1.54;
+
+1.54
+date	2014.02.06.09.29.21;	author -;	state -;
+branches;
+next	1.53;
+
+1.53
+date	2014.02.06.09.24.47;	author -;	state -;
+branches;
+next	1.52;
+
+1.52
+date	2014.02.06.09.23.40;	author -;	state -;
+branches;
+next	1.51;
+
+1.51
+date	2014.02.06.09.19.40;	author -;	state -;
+branches;
+next	1.50;
+
+1.50
+date	2014.02.06.09.18.01;	author -;	state -;
+branches;
+next	1.49;
+
+1.49
+date	2014.02.06.09.17.27;	author -;	state -;
+branches;
+next	1.48;
+
+1.48
+date	2014.02.06.09.15.40;	author -;	state -;
+branches;
+next	1.47;
+
+1.47
+date	2014.02.06.09.15.04;	author -;	state -;
+branches;
+next	1.46;
+
+1.46
+date	2014.02.06.09.12.16;	author -;	state -;
+branches;
+next	1.45;
+
+1.45
+date	2014.02.06.09.10.27;	author -;	state -;
+branches;
+next	1.44;
+
+1.44
+date	2014.02.06.09.09.25;	author -;	state -;
+branches;
+next	1.43;
+
+1.43
+date	2014.02.06.09.08.38;	author -;	state -;
+branches;
+next	1.42;
+
+1.42
+date	2014.02.06.09.04.21;	author -;	state -;
+branches;
+next	1.41;
+
+1.41
+date	2014.02.06.08.54.02;	author -;	state -;
+branches;
+next	1.40;
+
+1.40
+date	2014.02.06.08.52.19;	author -;	state -;
+branches;
+next	1.39;
+
+1.39
+date	2014.02.06.08.47.19;	author -;	state -;
+branches;
+next	1.38;
+
+1.38
+date	2014.02.06.08.46.14;	author -;	state -;
+branches;
+next	1.37;
+
+1.37
+date	2014.02.06.08.41.55;	author -;	state -;
+branches;
+next	1.36;
+
+1.36
+date	2014.02.06.08.40.27;	author -;	state -;
+branches;
+next	1.35;
+
+1.35
+date	2014.02.06.08.38.48;	author -;	state -;
+branches;
+next	1.34;
+
+1.34
+date	2014.02.06.08.36.47;	author -;	state -;
+branches;
+next	1.33;
+
+1.33
+date	2014.02.06.08.36.19;	author -;	state -;
+branches;
+next	1.32;
+
+1.32
+date	2014.02.06.08.33.15;	author -;	state -;
+branches;
+next	1.31;
+
+1.31
+date	2014.02.06.08.32.39;	author -;	state -;
+branches;
+next	1.30;
+
+1.30
+date	2014.02.06.08.24.38;	author -;	state -;
+branches;
+next	1.29;
+
+1.29
+date	2014.02.06.08.24.06;	author -;	state -;
+branches;
+next	1.28;
+
+1.28
+date	2014.02.06.08.22.58;	author -;	state -;
+branches;
+next	1.27;
+
+1.27
+date	2014.02.06.08.20.17;	author -;	state -;
+branches;
+next	1.26;
+
+1.26
+date	2014.02.06.08.18.47;	author -;	state -;
+branches;
+next	1.25;
+
+1.25
+date	2014.02.06.08.13.11;	author -;	state -;
+branches;
+next	1.24;
+
+1.24
+date	2014.02.06.08.00.41;	author -;	state -;
+branches;
+next	1.23;
+
+1.23
+date	2014.02.06.07.56.05;	author -;	state -;
+branches;
+next	1.22;
+
+1.22
+date	2014.02.06.07.45.33;	author -;	state -;
+branches;
+next	1.21;
+
+1.21
+date	2014.02.06.07.39.05;	author -;	state -;
+branches;
+next	1.20;
+
+1.20
+date	2014.02.06.07.27.46;	author -;	state -;
+branches;
+next	1.19;
+
+1.19
+date	2014.02.06.07.21.38;	author -;	state -;
+branches;
+next	1.18;
+
+1.18
+date	2014.02.06.07.21.18;	author -;	state -;
+branches;
+next	1.17;
+
+1.17
+date	2014.02.06.07.11.55;	author -;	state -;
+branches;
+next	1.16;
+
+1.16
+date	2014.02.06.07.04.50;	author -;	state -;
+branches;
+next	1.15;
+
+1.15
+date	2014.02.06.06.36.21;	author -;	state -;
+branches;
+next	1.14;
+
+1.14
+date	2014.02.06.06.30.06;	author -;	state -;
+branches;
+next	1.13;
+
+1.13
+date	2014.02.06.06.08.19;	author -;	state -;
+branches;
+next	1.12;
+
+1.12
+date	2014.02.06.06.00.45;	author -;	state -;
+branches;
+next	1.11;
+
+1.11
+date	2014.02.06.05.23.28;	author -;	state -;
+branches;
+next	1.10;
+
+1.10
+date	2014.02.06.05.22.38;	author -;	state -;
+branches;
+next	1.9;
+
+1.9
+date	2014.02.05.21.22.39;	author -;	state -;
+branches;
+next	1.8;
+
+1.8
+date	2014.02.05.21.12.54;	author -;	state -;
+branches;
+next	1.7;
+
+1.7
+date	2014.02.05.21.11.59;	author -;	state -;
+branches;
+next	1.6;
+
+1.6
+date	2014.02.05.21.10.19;	author -;	state -;
+branches;
+next	1.5;
+
+1.5
+date	2014.02.05.21.07.03;	author -;	state -;
+branches;
+next	1.4;
+
+1.4
+date	2014.02.05.06.04.06;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2014.01.10.01.06.42;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2011.01.21.05.20.03;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2011.01.21.05.05.43;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.58
+log
+@-
+@
+text
+@// $Id: jroff.java,v 1.57 2014-02-06 01:33:01-08 - - $
+// Sam Fields sefields
+// Sajan Patel savipate
+//
+// Name: jroff
+//
+// Description: Takes text files as input, formats and prints them
+//
+import java.io.*;
+import java.util.Scanner;
+import static java.lang.System.*;
+
+class jroff{
+   static final String STDIN_NAME = "-";
+    public static int width = 65; //Defined by .ll
+    public static int indent = 0; //Defined by .in
+    public static int pageOff = 0; //Defined by .po
+    public static int indentation = indent + pageOff; //Actual offset
+    public static int pageLen = 60; //Defined by .pl
+    public static int marginTop = 6; //Defined by .mt
+    public static int numLines = 0; //Keeps track of number of lines
+
+   static void scanfile (String filename, Scanner infile) {
+     linkedqueue<String> wordqueue = new linkedqueue<String> ();
+     //Iterate thru each line of the file
+     for (int linenr = 1; infile.hasNextLine(); ++linenr) {
+        String line = infile.nextLine();
+        //If a line is empty, print two newlines to start 
+        //a new paragraph
+        if (line.trim().length() == 0) {
+           out.print("\n");
+           out.print("\n");
+           numLines += 2;
+        }
+        //If a line's not empty, check if it's a command line
+        else {
+           String[] words = line.split ("\\s+");
+           //If so, try to execute a command...
+           if (words.length > 0 && words[0].startsWith (".")) {
+              try {
+                 commands.do_command (words);
+                 printparagraph(wordqueue);
+              }catch (IllegalArgumentException error) {
+                 auxlib.warn (filename, linenr, words[0],
+                            "invalid command");
+            }
+          //If not, insert the words to wordqueue.
+         }else if (words.length > 0){
+              for (String word: words) wordqueue.insert(word) ;
+         }
+         }
+      }
+      printparagraph(wordqueue);
+   }
+
+    public static void printparagraph (linkedqueue<String> queue) {
+       //New StringBuffer of words
+       StringBuffer words = new StringBuffer();
+       //Iterate thru queue
+       while (queue.empty() == false) {
+          String currentWord = queue.remove();
+          //If words is empty, append the word and a space
+          if (words.length() == 0) words.append(currentWord+" ");
+            //If words isn't empty, check for punctuation
+            else {
+               //If the current word ends with punctuation...
+               if (currentWord.endsWith("!") || 
+                   currentWord.endsWith(".") || 
+                   currentWord.endsWith("?") || 
+                   currentWord.endsWith(";") || 
+                   currentWord.endsWith(":") || 
+                   currentWord.endsWith("-")) {
+                   //Check if adding that word and
+                   //2 spaces will exceed width...
+                   if (words.length() + currentWord.length()
+                         + 2 > width) {
+                      //...And if so: go to new line, print words, clear
+                      //words, append the word and two spaces to words.
+                      out.printf("\n");
+                      numLines++;
+                      if (numLines > pageLen) {
+                         for (int i =1; i < marginTop ; i++) 
+                                 out.printf("\n");
+                             numLines = 0;
+                     }
+               for (int i = 1; i <= indentation ; i++) out.printf(" ");
+               out.printf("%s", words);
+               words.delete(0, words.length());
+               words.append(currentWord);
+               words.append("  ");
+               } else {
+                // if not, append the word and two spaces to words.
+                words.append(currentWord);
+                words.append("  ");
+           }
+        }
+        else {
+           //If the word doesn't end in punctuation && adding that word
+           //and a space would exceed width, print words and add the
+           //current word and a space to words.
+           if (words.length() + 1 > width) {
+               out.printf("\n");
+               numLines++;
+                      if (numLines > pageLen) {
+                            for (int i =1; i < marginTop ; i++) 
+                                  out.printf("\n");
+                            numLines = 0;
+                       }
+                      for (int i = 1; i <= indentation; i++)
+                            out.printf(" ");
+                        out.printf("%s",words);
+                        words.delete(0, words.length());
+                        words.append(currentWord);
+                        words.append(" ");
+                        } else {
+                        //And if the word doesn't end in punctuation &&
+                        //adding the word and a space wouldn't exceed
+                        //width, append the word and a space to words.
+                        words.append(currentWord);
+                        words.append(" ");
+                     }
+                 }
+             }
+        }
+        //If words has stuff in it, print it out.
+        out.printf("%s",words);
+    }
+
+       public static void main (String[] args) {
+       //New linkedqueue words
+      linkedqueue <String> words = new linkedqueue <String> ();
+      //If no filename is given, read from the command line
+      if (args.length == 0) {
+         scanfile (STDIN_NAME, new Scanner (in));
+         //Otherwise iterate thru files given
+         //and put them thru scanfile
+      }else {
+         for (String filename : args) {
+            if (filename.equals (STDIN_NAME)) {
+               scanfile (STDIN_NAME, new Scanner (in));
+            }else {
+               try {
+                  Scanner scan = new Scanner (new File (filename));
+                  scanfile (filename, scan);
+                  scan.close();
+               }catch (IOException error) {
+                  auxlib.warn (error.getMessage());
+               }
+            }
+         }
+      }
+   }
+
+}
+@
+
+
+1.57
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.56 2014-02-06 01:32:03-08 - - $
+d109 2
+a110 1
+                      for (int i = 1; i <= indentation; i++) out.printf(" ");
+@
+
+
+1.56
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.55 2014-02-06 01:30:56-08 - - $
+d92 1
+a92 1
+                //...And if not, append the word and two spaces to words.
+d124 2
+a125 2
+	//If words has stuff in it, print it out.
+	out.printf("%s",words);
+@
+
+
+1.55
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.54 2014-02-06 01:29:21-08 - - $
+d115 3
+a117 3
+                        //And if the word doesn't end in punctuation && adding
+                        //the word and a space wouldn't exceed width,
+                        // append the word and a space to words.
+@
+
+
+1.54
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.53 2014-02-06 01:24:47-08 - - $
+d111 2
+a112 2
+	                words.delete(0, words.length());
+	                words.append(currentWord);
+d117 3
+a119 3
+	                // append the word and a space to words.
+	                words.append(currentWord);
+	                words.append(" ");
+d134 2
+a135 1
+	 //Otherwise iterate thru files given and put them thru scanfile
+@
+
+
+1.53
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.52 2014-02-06 01:23:40-08 - - $
+d109 15
+a123 15
+	               for (int i = 1; i <= indentation; i++) out.printf(" ");
+			out.printf("%s",words);
+			words.delete(0, words.length());
+			words.append(currentWord);
+			words.append(" ");
+		    } else {
+			//And if the word doesn't end in punctuation && adding that
+			//word and a space wouldn't exceed width, append the word
+			//and a space to words.
+			words.append(currentWord);
+			words.append(" ");
+		    }
+		}
+	    }
+	}
+@
+
+
+1.52
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.51 2014-02-06 01:19:40-08 - - $
+d102 2
+a103 2
+       		out.printf("\n");
+       		numLines++;
+@
+
+
+1.51
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.50 2014-02-06 01:18:01-08 - - $
+d86 16
+a101 16
+       		for (int i = 1; i <= indentation ; i++) out.printf(" ");
+       		out.printf("%s", words);
+       		words.delete(0, words.length());
+       		words.append(currentWord);
+       		words.append("  ");
+       	    } else {
+       		//...And if not, append the word and two spaces to words.
+       		words.append(currentWord);
+       		words.append("  ");
+       	    }
+       	}
+       	else {
+       	    //If the word doesn't end in punctuation && adding that word
+       	    //and a space would exceed width, print words and add the
+       	    //current word and a space to words.
+       	    if (words.length() + 1 > width) {
+@
+
+
+1.50
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.49 2014-02-06 01:17:27-08 - - $
+d82 2
+a83 1
+                         for (int i =1; i < marginTop ; i++) out.printf("\n");
+d105 2
+a106 1
+                            for (int i =1; i < marginTop ; i++) out.printf("\n");
+@
+
+
+1.49
+log
+@-
+@
+text
+@d1 1
+a1 1
+B0;136;0c// $Id: jroff.java,v 1.48 2014-02-06 01:15:40-08 - - $
+@
+
+
+1.48
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.47 2014-02-06 01:15:04-08 - - $
+d73 6
+a78 4
+                   //Check if adding that word and 2 spaces will exceed width...
+                   if (words.length() + currentWord.length() + 2 > width) {
+                      //...And if so: go to new line, print words, clear words,
+                      //append the word and two spaces to words.
+@
+
+
+1.47
+log
+@-
+@
+text
+@d1 1
+a1 1
+B0;136;0c// $Id: jroff.java,v 1.46 2014-02-06 01:12:16-08 - - $
+@
+
+
+1.46
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.45 2014-02-06 01:10:27-08 - - $
+d67 6
+a72 3
+               if (currentWord.endsWith("!") || currentWord.endsWith(".") || 
+                   currentWord.endsWith("?") || currentWord.endsWith(";") || 
+                   currentWord.endsWith(":") || currentWord.endsWith("-")) {
+@
+
+
+1.45
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.44 2014-02-06 01:09:25-08 - - $
+d78 21
+a98 21
+	                      numLines = 0;
+	              }
+			for (int i = 1; i <= indentation ; i++) out.printf(" ");
+			out.printf("%s", words);
+			words.delete(0, words.length());
+			words.append(currentWord);
+			words.append("  ");
+		    } else {
+			//...And if not, append the word and two spaces to words.
+			words.append(currentWord);
+			words.append("  ");
+		    }
+		}
+		else {
+		    //If the word doesn't end in punctuation && adding that word
+		    //and a space would exceed width, print words and add the
+		    //current word and a space to words.
+		    if (words.length() + 1 > width) {
+			out.printf("\n");
+			numLines++;
+	               if (numLines > pageLen) {
+@
+
+
+1.44
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.43 2014-02-06 01:08:38-08 - - $
+d77 1
+a77 1
+	                 for (int i =1; i < marginTop ; i++) out.printf("\n");
+@
+
+
+1.43
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.42 2014-02-06 01:04:21-08 - - $
+d97 1
+a97 1
+			numxLines++;
+@
+
+
+1.42
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.41 2014-02-06 00:54:02-08 - - $
+d49 2
+a50 1
+	     for (String word: words) wordqueue.insert(word) ;
+a51 1
+	 }
+d97 6
+a102 6
+			numLines++;
+			if (numLines > pageLen) {
+                           for (int i =1; i < marginTop ; i++) out.printf("\n");
+			   numLines = 0;
+			}
+			for (int i = 1; i <= indentation; i++) out.printf(" ");
+@
+
+
+1.41
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.40 2014-02-06 00:52:19-08 - - $
+d28 2
+a29 1
+        //If a line is empty, print two newlines to start a new paragraph
+d57 23
+a79 23
+	//New StringBuffer of words
+	StringBuffer words = new StringBuffer();
+	//Iterate thru queue
+	while (queue.empty() == false) {
+	    String currentWord = queue.remove();
+	    //If words is empty, append the word and a space
+	    if (words.length() == 0) words.append(currentWord+" ");
+	    //If words isn't empty, check for punctuation
+	    else {
+		//If the current word ends with punctuation...
+		if (currentWord.endsWith("!") || currentWord.endsWith(".") || 
+                    currentWord.endsWith("?") || currentWord.endsWith(";") || 
+                    currentWord.endsWith(":") || currentWord.endsWith("-")) {
+		    //Check if adding that word and 2 spaces will exceed width...
+		    if (words.length() + currentWord.length() + 2 > width) {
+			//...And if so: go to new line, print words, clear words,
+			//append the word and two spaces to words.
+			out.printf("\n");
+			numLines++;
+			if (numLines > pageLen) {
+			    for (int i =1; i < marginTop ; i++) out.printf("\n");
+			    numLines = 0;
+			}
+@
+
+
+1.40
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.39 2014-02-06 00:47:19-08 - - $
+d32 1
+a32 1
+	   numLines += 2;
+d46 1
+a46 1
+	    //If not, insert the words to wordqueue.
+@
+
+
+1.39
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.38 2014-02-06 00:46:14-08 - - $
+d24 20
+a43 20
+       linkedqueue<String> wordqueue = new linkedqueue<String> ();
+       //Iterate thru each line of the file
+      for (int linenr = 1; infile.hasNextLine(); ++linenr) {
+         String line = infile.nextLine();
+	//If a line is empty, print two newlines to start a new paragraph
+	if (line.trim().length() == 0) {
+	    out.print("\n");
+	    out.print("\n");
+	    numLines += 2;
+	}
+	//If a line's not empty, check if it's a command line
+	else {
+         String[] words = line.split ("\\s+");
+	 //If so, try to execute a command...
+         if (words.length > 0 && words[0].startsWith (".")) {
+            try {
+		commands.do_command (words);
+		printparagraph(wordqueue);
+            }catch (IllegalArgumentException error) {
+               auxlib.warn (filename, linenr, words[0],
+@
+
+
+1.38
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.37 2014-02-06 00:41:55-08 - - $
+d28 8
+a35 8
+	 //If a line is empty, print two newlines to start a new paragraph
+	 if (line.trim().length() == 0) {
+	     out.print("\n");
+	     out.print("\n");
+	     numLines += 2;
+	 }
+	 //If a line's not empty, check if it's a command line
+	 else {
+@
+
+
+1.37
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.36 2014-02-06 00:40:27-08 - - $
+d28 1
+d34 1
+d37 1
+d46 1
+@
+
+
+1.36
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.35 2014-02-06 00:38:48-08 - - $
+d28 1
+a28 1
+	 if (line.length() == 0) {
+@
+
+
+1.35
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.34 2014-02-06 00:36:47-08 - - $
+a31 1
+	     break;
+d33 1
+d46 1
+@
+
+
+1.34
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.33 2014-02-06 00:36:19-08 - - $
+d28 6
+@
+
+
+1.33
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.32 2014-02-06 00:33:15-08 - - $
+d19 1
+a19 1
+    public static int pageLen = 10; //Defined by .pl
+@
+
+
+1.32
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.31 2014-02-06 00:32:39-08 - - $
+d66 1
+d88 1
+@
+
+
+1.31
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.30 2014-02-06 00:24:38-08 - - $
+a27 3
+	 if (numLines > pageLen) {
+	     for(int i = 1; i < marginTop ; i++) out.printf("\n");
+	 }
+@
+
+
+1.30
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.29 2014-02-06 00:24:06-08 - - $
+d53 1
+a53 1
+	    //If words is empty, append the word
+d57 5
+a61 1
+		if (currentWord.endsWith("!") || currentWord.endsWith(".") || currentWord.endsWith("?") || currentWord.endsWith(";") || currentWord.endsWith(":") || currentWord.endsWith("-")) {
+d63 2
+d76 1
+d82 3
+d97 3
+d106 1
+@
+
+
+1.29
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.28 2014-02-06 00:22:58-08 - - $
+d19 1
+a19 1
+    public static int pageLen = 60; //Defined by .pl
+@
+
+
+1.28
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.27 2014-02-06 00:20:17-08 - - $
+a27 5
+	 if (line.length() == 0) {
+	     //out.printf("\n");
+	     //out.printf("\n");
+	     //numLines+=2;
+	 }
+@
+
+
+1.27
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.26 2014-02-06 00:18:47-08 - - $
+d29 3
+a31 3
+         out.printf("\n");
+	 out.printf("\n");
+	 numLines+=2;
+@
+
+
+1.26
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.25 2014-02-06 00:13:11-08 - - $
+d28 5
+a32 2
+	 if (line.length() == 0) out.printf("\n");
+	 numLines++;
+@
+
+
+1.25
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.24 2014-02-06 00:00:41-08 - - $
+d59 1
+a59 1
+		if (currentWord.endsWith("!")) {
+@
+
+
+1.24
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.23 2014-02-05 23:56:05-08 - - $
+d21 1
+d28 5
+a32 1
+	 if (line.length() == 0) out.printf(".sp1");
+d62 4
+d79 4
+@
+
+
+1.23
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.22 2014-02-05 23:45:33-08 - - $
+d19 2
+a20 1
+    public static int pageLen = 60; //Default page length
+@
+
+
+1.22
+log
+@-
+@
+text
+@d1 8
+a8 2
+// $Id: jroff.java,v 1.21 2014-02-05 23:39:05-08 - - $
+
+d19 1
+@
+
+
+1.21
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.20 2014-02-05 23:27:46-08 - - $
+a12 1
+    public static int spNum = 0;
+@
+
+
+1.20
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.19 2014-02-05 23:21:38-08 - - $
+d13 1
+@
+
+
+1.19
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.18 2014-02-05 23:21:18-08 - - $
+a30 1
+            out.printf ("%n");
+@
+
+
+1.18
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.17 2014-02-05 23:11:55-08 - - $
+d19 1
+a19 1
+	 if (line.length == 0) out.printf(".sp1");
+@
+
+
+1.17
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.16 2014-02-05 23:04:50-08 - - $
+d19 1
+a32 1
+	 else out.printf(".sp1");
+@
+
+
+1.16
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.15 2014-02-05 22:36:21-08 - - $
+d50 1
+d63 1
+@
+
+
+1.15
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.14 2014-02-05 22:30:06-08 - - $
+d9 4
+a12 1
+    public static int width = 65;
+@
+
+
+1.14
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.13 2014-02-05 22:08:19-08 - - $
+d41 1
+a41 1
+	    if (words.length() == 0) words.append(currentWord);
+@
+
+
+1.13
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.12 2014-02-05 22:00:45-08 - - $
+d9 1
+a36 1
+	int width = 65;
+@
+
+
+1.12
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.11 2014-02-05 21:23:28-08 - - $
+d70 1
+@
+
+
+1.11
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.10 2014-02-05 21:22:38-08 - - $
+d40 29
+a68 1
+	    out.printf(currentWord);
+@
+
+
+1.10
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.9 2014-02-05 13:22:39-08 - - $
+d27 1
+a27 1
+         }c2
+@
+
+
+1.9
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.8 2014-02-05 13:12:54-08 - - $
+a14 1
+	 //Otherwise split the line into words around white space...
+a15 1
+	 //and if the line is a control line...
+d19 1
+a19 1
+	       wordqueue.printparagraph(wordqueue.front);
+d24 1
+a24 2
+	    //and if it's not, read the line and add each word to the queue
+         }else {
+d27 2
+a28 1
+         }
+d30 1
+a30 1
+      wordqueue.printparagraph(wordqueue.front);
+d33 11
+@
+
+
+1.8
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.7 2014-02-05 13:11:59-08 - - $
+a14 4
+	 //If a line is empty print a message...
+	 if (line.length() == 0) {
+	     out.printf(".sp 1");
+	 } else {
+d18 1
+a18 1
+         if (words[0].startsWith (".")) {
+a19 1
+		//...execute the appropriate command...
+a20 1
+	       //...and print the words in the queue
+a21 1
+	       out.printf("should have just printed shit.");
+a30 1
+	 }
+@
+
+
+1.7
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.6 2014-02-05 13:10:19-08 - - $
+a39 1
+      out.printf("Bout to print a queue");
+a40 1
+      out.printf("just printed a queue");
+@
+
+
+1.6
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.5 2014-02-05 13:07:03-08 - - $
+a34 1
+	     out.printf("Bout to build a queue");
+a35 1
+	     out.printf("Just built a queue");
+@
+
+
+1.5
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.4 2014-02-04 22:04:06-08 - - $
+a24 1
+		out.printf("Bout to do commands.");
+a25 1
+		out.printf("Just did commands");
+@
+
+
+1.4
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.3 2014-01-09 17:06:42-08 - - $
+d19 1
+a19 1
+	     //Otherwise split the line into words around white space...
+d22 1
+a22 1
+         if (words.length > 0 && words[0].startsWith (".")) {
+d25 3
+a27 1
+               commands.do_command (words);
+d29 2
+a30 1
+	       printparagraph(wordqueue.front);
+d37 1
+d39 1
+d44 3
+d49 1
+a49 45
+    public static void printparagraph(node front) {
+	//New StringBuffer of words
+	StringBuffer words = new StringBuffer();
+	int width = 65;
+	//Iterate through the linked list that is handed to printparagraph
+	for (node curr = front; curr != null ; curr = curr.link) {
+	    //If words is empty, append the word in the current node
+	    if (words.length() == 0) {
+		words.append(curr.item);
+	    } else {
+		//Words isn't empty. If it ends in punctuation
+		//append two spaces and the word.
+		if (words.lastIndexOf(".") == words.length()){
+		    if (words.length() + 2 > width) {
+			out.printf("\n");
+			out.printf("%s",words);
+			words.delete(0, words.length()); 
+		        words.append(curr.item);
+		        words.append("  ");
+		    } else if (words.length() + 2 < width) {
+			words.append(curr.item);
+			words.append("  ");
+		    }
+		}
+		//.. and if it ends in something other than
+		//punctuation, append only one space and the word.
+		else { 
+		    if (words.length() + 1 > width) {
+			out.printf("\n");
+			out.printf("%s",words);
+			words.delete(0, words.length());
+			words.append(curr.item);
+			words.append(" ");
+		    }
+		    else if (words.length() +1 < width) {
+			words.append(curr.item);
+			words.append(" ");
+		    }
+		}
+	    }
+	}
+	if (words.length() > 0) out.printf("%s",words);
+    }
+
+   public static void main (String[] args) {
+@
+
+
+1.3
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.2 2011-01-20 21:20:03-08 - - $
+d11 2
+a12 1
+      out.printf ("STUB: filename = %s%n", filename);
+d15 5
+a19 1
+         out.printf ("STUB: %s: %4d: [%s]%n", filename, linenr, line);
+d21 1
+d24 1
+d26 2
+d32 1
+d34 1
+a34 1
+            for (String word: words) out.printf ("[%s]", word);
+d37 1
+d41 44
+d86 1
+d88 1
+d91 1
+@
+
+
+1.2
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.1 2011-01-20 21:05:43-08 - - $
+d17 3
+a19 2
+            commands.cmd command = commands.cmd_map.get (words[0]);
+            if (command == null) {
+d21 1
+a21 3
+                     "invalid command");
+            }else {
+               command.exec (words);
+@
+
+
+1.1
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jroff.java,v 1.2 2010-01-20 14:04:03-08 - - $
+d14 1
+a14 1
+         out.printf ("STUB: %s: %4d: \"%s\"%n", filename, linenr, line);
+@

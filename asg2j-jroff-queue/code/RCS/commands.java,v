@@ -1,0 +1,435 @@
+head	1.11;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.11
+date	2014.02.06.08.34.42;	author -;	state -;
+branches;
+next	1.10;
+
+1.10
+date	2014.02.06.07.05.32;	author -;	state -;
+branches;
+next	1.9;
+
+1.9
+date	2014.02.06.06.34.17;	author -;	state -;
+branches;
+next	1.8;
+
+1.8
+date	2014.02.06.06.33.18;	author -;	state -;
+branches;
+next	1.7;
+
+1.7
+date	2014.01.18.01.57.56;	author -;	state -;
+branches;
+next	1.6;
+
+1.6
+date	2014.01.18.01.43.33;	author -;	state -;
+branches;
+next	1.5;
+
+1.5
+date	2014.01.11.01.52.47;	author -;	state -;
+branches;
+next	1.4;
+
+1.4
+date	2014.01.10.20.55.55;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2014.01.10.01.06.56;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2011.01.21.05.07.31;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2011.01.21.05.05.43;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.11
+log
+@-
+@
+text
+@// Sam Fields sefields
+// Sajan Patel savipate
+// $Id: commands.java,v 1.10 2014-02-05 23:05:32-08 - - $
+
+import java.util.HashMap;
+import static java.lang.System.*;
+
+class commands {
+
+   private static void command_00 (String[] words) {
+      // Executing a comment does nothing.
+   }
+
+   private static void command_bp (String[] words) {
+      STUB (words);
+   }
+
+   private static void command_br (String[] words) {
+      STUB (words);
+   }
+
+   private static void command_cc (String[] words) {
+      STUB (words);
+   }
+
+   private static void command_in (String[] words) {
+       jroff.indent = Integer.parseInt(words[1]);
+       jroff.indentation = jroff.indent + jroff.pageOff;
+   }
+
+   private static void command_ll (String[] words) {
+       jroff.width = Integer.parseInt(words[1]);
+   }
+
+   private static void command_mt (String[] words) {
+       jroff.marginTop = Integer.parseInt(words[1]);
+   }
+
+   private static void command_pl (String[] words) {
+       jroff.pageLen = Integer.parseInt(words[1]);
+   }
+
+   private static void command_po (String[] words) {
+       jroff.pageOff = Integer.parseInt(words[1]);
+   }
+
+   private static void command_sp (String[] words) {
+      STUB (words);
+   }
+
+   private static void STUB (String[] words) {
+      out.printf ("%s: STUB: %s",
+                  auxlib.PROGNAME, auxlib.caller());
+      for (String word: words) out.printf (" %s", word);
+      out.printf ("%n");
+   }
+
+   public static void do_command (String[] words) {
+      switch (words[0]) {
+         case ".\\\"": command_00 (words); break;
+         case ".bp"  : command_bp (words); break;
+         case ".br"  : command_br (words); break;
+         case ".cc"  : command_cc (words); break;
+         case ".in"  : command_in (words); break;
+         case ".ll"  : command_ll (words); break;
+         case ".mt"  : command_mt (words); break;
+         case ".pl"  : command_pl (words); break;
+         case ".po"  : command_po (words); break;
+         case ".sp"  : command_sp (words); break;
+         default     : throw new IllegalArgumentException (words[0]);
+      }
+   }
+
+}
+
+@
+
+
+1.10
+log
+@-
+@
+text
+@d1 3
+a3 1
+// $Id: commands.java,v 1.9 2014-02-05 22:34:17-08 - - $
+d36 1
+a36 1
+      STUB (words);
+d40 1
+a40 1
+      STUB (words);
+@
+
+
+1.9
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: commands.java,v 1.8 2014-02-05 22:33:18-08 - - $
+d25 2
+a26 1
+      STUB (words);
+d42 1
+a42 1
+      STUB (words);
+@
+
+
+1.8
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: commands.java,v 1.7 2014-01-17 17:57:56-08 - - $
+d29 1
+a29 1
+       width = Integer.parseInt(words[1]);
+@
+
+
+1.7
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: commands.java,v 1.6 2014-01-17 17:43:33-08 - - $
+d29 1
+a29 1
+      STUB (words);
+@
+
+
+1.6
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: commands.java,v 1.5 2014-01-10 17:52:47-08 - - $
+a35 4
+   private static void command_tl (String[] words) {
+      STUB (words);
+   }
+
+a63 1
+         case ".tl"  : command_tl (words); break;
+@
+
+
+1.5
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: commands.java,v 1.4 2014-01-10 12:55:55-08 - - $
+a7 7
+   private static void STUB (String[] words) {
+      out.printf ("%s: STUB: %s",
+                  auxlib.PROGNAME, auxlib.caller());
+      for (String word: words) out.printf (" %s", word);
+      out.printf ("%n");
+   }
+
+d51 7
+@
+
+
+1.4
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: commands.java,v 1.3 2014-01-09 17:06:56-08 - - $
+d9 2
+a10 4
+      StackTraceElement caller = auxlib.caller();
+      out.printf ("%s: STUB: %s[%d] %s",
+                  auxlib.PROGNAME, caller.getFileName(),
+                  caller.getLineNumber(), caller.getMethodName());
+@
+
+
+1.3
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: commands.java,v 1.2 2011-01-20 21:07:31-08 - - $
+d22 1
+a22 1
+      STUB (opnds);
+d26 1
+a26 1
+      STUB (opnds);
+d30 1
+a30 1
+      STUB (opnds);
+d34 1
+a34 1
+      STUB (opnds);
+d38 1
+a38 1
+      STUB (opnds);
+d42 1
+a42 1
+      STUB (opnds);
+d46 1
+a46 1
+      STUB (opnds);
+d50 1
+a50 1
+      STUB (opnds);
+d54 1
+a54 1
+      STUB (opnds);
+d58 1
+a58 1
+      STUB (opnds);
+@
+
+
+1.2
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: commands.java,v 1.1 2011-01-20 21:05:43-08 - - $
+d8 6
+a13 4
+   static void STUB_message (Object obj, String[] opnds) {
+      out.printf ("%s: STUB: %s.exec ",
+                  auxlib.PROGNAME, obj.getClass().getName());
+      for (String opnd: opnds) out.printf ("[%s]", opnd);
+d17 2
+a18 2
+   static interface cmd {
+      public void exec (String[] opnds);
+d21 2
+a22 4
+   static class cmd_00 implements cmd {
+      public void exec (String[] opnds) {
+         // Executing a comment does nothing.
+      }
+d25 2
+a26 4
+   static class cmd_bp implements cmd {
+      public void exec (String[] opnds) {
+         STUB_message (this, opnds);
+      }
+d29 2
+a30 4
+   static class cmd_br implements cmd {
+      public void exec (String[] opnds) {
+         STUB_message (this, opnds);
+      }
+d33 2
+a34 4
+   static class cmd_cc implements cmd {
+      public void exec (String[] opnds) {
+         STUB_message (this, opnds);
+      }
+d37 2
+a38 4
+   static class cmd_in implements cmd {
+      public void exec (String[] opnds) {
+         STUB_message (this, opnds);
+      }
+d41 2
+a42 4
+   static class cmd_ll implements cmd {
+      public void exec (String[] opnds) {
+         STUB_message (this, opnds);
+      }
+d45 2
+a46 4
+   static class cmd_mt implements cmd {
+      public void exec (String[] opnds) {
+         STUB_message (this, opnds);
+      }
+d49 2
+a50 4
+   static class cmd_tl implements cmd {
+      public void exec (String[] opnds) {
+         STUB_message (this, opnds);
+      }
+d53 2
+a54 4
+   static class cmd_pl implements cmd {
+      public void exec (String[] opnds) {
+         STUB_message (this, opnds);
+      }
+d57 2
+a58 4
+   static class cmd_po implements cmd {
+      public void exec (String[] opnds) {
+         STUB_message (this, opnds);
+      }
+d61 14
+a74 3
+   static class cmd_sp implements cmd {
+      public void exec (String[] opnds) {
+         STUB_message (this, opnds);
+a77 15
+   static HashMap<String, cmd> cmd_map = new HashMap<String, cmd>();
+   static {
+      cmd_map.put (".\\\"", new cmd_00 ());
+      cmd_map.put (".bp"  , new cmd_bp ());
+      cmd_map.put (".br"  , new cmd_br ());
+      cmd_map.put (".cc"  , new cmd_cc ());
+      cmd_map.put (".in"  , new cmd_in ());
+      cmd_map.put (".ll"  , new cmd_ll ());
+      cmd_map.put (".mt"  , new cmd_mt ());
+      cmd_map.put (".tl"  , new cmd_tl ());
+      cmd_map.put (".pl"  , new cmd_pl ());
+      cmd_map.put (".po"  , new cmd_po ());
+      cmd_map.put (".sp"  , new cmd_sp ());
+   }
+
+@
+
+
+1.1
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: commands.java,v 1.1 2011-01-20 20:25:07-08 - - $
+d19 1
+a19 1
+   static class cmd_comment implements cmd {
+d87 11
+a97 11
+      cmd_map.put (".\\\"", new cmd_comment ());
+      cmd_map.put (".bp", new cmd_bp ());
+      cmd_map.put (".br", new cmd_br ());
+      cmd_map.put (".cc", new cmd_cc ());
+      cmd_map.put (".in", new cmd_in ());
+      cmd_map.put (".ll", new cmd_ll ());
+      cmd_map.put (".mt", new cmd_mt ());
+      cmd_map.put (".tl", new cmd_tl ());
+      cmd_map.put (".pl", new cmd_pl ());
+      cmd_map.put (".po", new cmd_po ());
+      cmd_map.put (".sp", new cmd_sp ());
+@

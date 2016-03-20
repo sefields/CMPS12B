@@ -1,0 +1,35 @@
+head	1.1;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.1
+date	2011.01.29.04.00.25;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@-
+@
+text
+@This is a test of the cross reference program.
+Do hyphenated-words work properly?
+Or abbreviations like U.C.S.C.?
+foo bar baz
+foo bar baz
+foo bar baz
+foo bar baz
+foo bar baz
+foo bar baz
+the the the the the the the the the the the the the the the the the the
+the the the the the the the the
+$Id: data1.in,v 1.1 2010-10-22 18:36:09-07 - - $
+@

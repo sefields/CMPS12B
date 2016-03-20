@@ -1,0 +1,358 @@
+head	1.7;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.7
+date	2014.02.19.07.25.08;	author -;	state -;
+branches;
+next	1.6;
+
+1.6
+date	2014.02.19.07.03.38;	author -;	state -;
+branches;
+next	1.5;
+
+1.5
+date	2014.02.19.06.15.34;	author -;	state -;
+branches;
+next	1.4;
+
+1.4
+date	2014.02.19.01.39.03;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2014.02.18.22.39.44;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2014.02.18.19.41.10;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2014.01.17.01.44.47;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.7
+log
+@-
+@
+text
+@// $Id: jxref.java,v 1.6 2014-02-18 23:03:38-08 - - $
+// Sam Fields sefields
+//
+//NAME: Xref Binary Search Tree
+//
+//SYNOPSIS: jxref [-df] [filename...]
+//
+//DESCRIPTION: Reads a text input. Keeps track of
+//every unique word and which lines each word appears
+//in. Prints this information to output.
+
+import java.io.*;
+import java.util.Scanner;
+import static java.lang.System.*;
+
+class jxref {
+   static final String STDIN_NAME = "-";
+    public static boolean debug = false;
+    public static boolean lowerCase = false;
+
+   static class printer implements visitor <String, queue <Integer>> {
+      public void visit (String key, queue <Integer> value) {
+         out.printf ("%s",key);
+         for (int linenr: value) out.printf (" %d", linenr);
+         out.printf ("%n");
+      }
+   }
+
+
+   static void xref_file (String filename, Scanner scan) {
+       //Print header
+       out.printf("\n");
+       for (int i = 1; i <= 65; i++) out.printf(":");
+       out.printf("\n");
+       out.printf(filename);
+       out.printf("\n");
+       for (int i = 1; i <= 65; i++) out.printf(":");
+       out.printf("\n");
+       out.printf("\n");
+       //New treemap to store the words
+      treemap <String, queue <Integer>> map =
+            new treemap <String, queue <Integer>> ();
+      //Iterate thru input lines
+      for (int linenr = 1; scan.hasNextLine (); ++linenr) {
+         //Iterate thru each word on each line
+         for (String word: scan.nextLine().split ("\\W+")) {
+             //If option "-f" was called, convert
+             //word to lower case
+            if (lowerCase == true) word = word.toLowerCase();
+            if (word.matches ("^\\d*$")) continue;
+            //If the word is already in the tree, add
+            //the line number where it appeared to the queue
+            //in that node
+            if (map.get(word) != null) map.get(word).insert(linenr);
+            //Otherwise make a new queue, insert the line
+            //number into that queue, and add a new node
+            //containing that word and queue.
+            else {
+                queue <Integer> linez = new queue <Integer>();
+                linez.insert(linenr);
+                map.put(word, linez);
+              }
+         }
+      }
+      //If option "-d" was called, print debug info. Otherwise
+      //produce normal output.
+      if (debug == true) map.debug_dump();
+      else {
+      visitor <String, queue <Integer>> print_fn = new printer ();
+      map.do_visit (print_fn);
+      }
+   }
+
+   public static void main (String[] args) {
+       //If there are no args, read stdin
+      if (args.length == 0) {
+         xref_file (STDIN_NAME, new Scanner (in));
+      }else {
+         //Otherwise iterate thru the args...
+         for (int argi = 0; argi < args.length; ++argi) {
+             //..and if the first one starts 
+             //with "-", scan opts
+             if (argi==0 && args[argi].startsWith("-")){
+                scanOpts(args[0]);
+                argi++;
+            }
+            String filename = args[argi];
+            //If user specifies "-" for filename
+            //read from command line...
+            if (filename.equals (STDIN_NAME)) {
+               xref_file (STDIN_NAME, new Scanner (in));
+            }else {
+                //..and otherwise attempt to use the
+                //specified file
+               try {
+                  Scanner scan = new Scanner (new File (filename));
+                  xref_file (filename, scan);
+                  scan.close ();
+               }catch (IOException error) {
+                  auxlib.warn (error.getMessage ());
+               }
+            }
+         }
+      }
+      auxlib.exit ();
+   }
+
+    public static void scanOpts(String op) {
+        if (op.equals("-d")) debug = true;
+        else if (op.equals("-f")) lowerCase = true;
+        else if (op.equals("-fd")) {
+            debug = true;
+            lowerCase = true;
+        }
+        else if (op.equals("-df")) {
+            debug = true;
+            lowerCase = true;
+        }
+        //An unsupported option produces an
+        //error to stderr and exit status of 1
+        else {
+            System.err.println("Error: Unsupported Operation.");
+            auxlib.usage_exit(op);
+        }
+        return;
+    }
+}
+@
+
+
+1.6
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jxref.java,v 1.5 2014-02-18 22:15:34-08 - - $
+d23 1
+a23 1
+	 out.printf ("%s",key);
+d45 1
+a45 1
+	  //Iterate thru each word on each line
+d47 3
+a49 3
+	     //If option "-f" was called, convert
+	     //word to lower case
+	    if (lowerCase == true) word = word.toLowerCase();
+d51 12
+a62 12
+	    //If the word is already in the tree, add
+	    //the line number where it appeared to the queue
+	    //in that node
+	    if (map.get(word) != null) map.get(word).insert(linenr);
+	    //Otherwise make a new queue, insert the line
+	    //number into that queue, and add a new node
+	    //containing that word and queue.
+	    else {
+		queue <Integer> linez = new queue <Integer>();
+		linez.insert(linenr);
+		map.put(word, linez);
+	    }
+d79 1
+a79 1
+	  //Otherwise iterate thru the args...
+d81 3
+a83 3
+	     //..and if the first one starts 
+	     //with "-", scan opts
+	     if (argi==0 && args[argi].startsWith("-")){
+d85 2
+a86 2
+		argi++;
+	     }
+d88 2
+a89 2
+	    //If user specifies "-" for filename
+	    //read from command line...
+d93 2
+a94 2
+		//..and otherwise attempt to use the
+		//specified file
+d109 17
+a125 17
+	if (op.equals("-d")) debug = true;
+	else if (op.equals("-f")) lowerCase = true;
+	else if (op.equals("-fd")) {
+	    debug = true;
+	    lowerCase = true;
+	}
+	else if (op.equals("-df")) {
+	    debug = true;
+	    lowerCase = true;
+	}
+	//An unsupported option produces an
+	//error to stderr and exit status of 1
+	else {
+	    System.err.println("Error: Unsupported Operation.");
+	    auxlib.usage_exit(op);
+	}
+	return;
+a126 1
+
+@
+
+
+1.5
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jxref.java,v 1.4 2014-02-18 17:39:03-08 - - $
+d4 7
+d47 2
+d51 3
+d55 3
+d65 2
+d81 2
+a82 1
+	     //..and if the first starts with -, scan opts
+d88 2
+d93 2
+d119 6
+a124 1
+	else out.printf("Error: Invalid operator.");
+a128 1
+
+@
+
+
+1.4
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jxref.java,v 1.3 2014-02-18 14:39:44-08 - - $
+d16 1
+a16 1
+         out.printf ("%s %s", key, value);
+d24 9
+d97 1
+a97 1
+	else out.printf("Error: Invalid operator");
+@
+
+
+1.3
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jxref.java,v 1.2 2014-02-18 11:41:10-08 - - $
+d22 1
+@
+
+
+1.2
+log
+@-
+@
+text
+@d1 3
+a3 1
+// $Id: jxref.java,v 1.1 2014-01-16 17:44:47-08 - - $
+d23 1
+d26 1
+d28 1
+d30 1
+a30 1
+	     if (lowerCase == true) word = word.toLowerCase();
+d32 6
+a37 1
+            //out.printf ("%s: %d: %s%n", filename, linenr, word);//rm
+d40 2
+d44 1
+d54 1
+a81 1
+	    out.printf("nigga");
+@
+
+
+1.1
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jxref.java,v 1.1 2011-01-28 19:50:37-08 - - $
+d9 2
+d25 1
+d27 1
+a27 1
+            out.printf ("%s: %d: %s%n", filename, linenr, word);
+d35 1
+d39 1
+d41 4
+d62 16
+@

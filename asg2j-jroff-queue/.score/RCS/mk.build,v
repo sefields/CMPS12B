@@ -1,0 +1,49 @@
+head	1.2;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.2
+date	2011.02.01.20.40.15;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2011.01.21.05.13.54;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@-
+@
+text
+@#!/bin/sh -x
+# $Id: mk.build,v 1.1 2011/01/21 05:13:54 - - $
+#
+# This does the build and runs checksource.
+#
+PATH=$PATH:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin
+checksource *.java Makefile README 2>&1 | tee checksource.log
+gmake 2>&1 | tee gmake.log
+@
+
+
+1.1
+log
+@-
+@
+text
+@d2 1
+a2 1
+# $Id: mk.build,v 1.1 2010-01-20 12:41:36-08 - - $
+a6 1
+if [ -f PARTNER ] ; then partnercheck 2>&1 | tee partnercheck.log ; fi
+@

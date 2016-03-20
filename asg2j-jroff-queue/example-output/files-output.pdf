@@ -1,0 +1,1773 @@
+%PDF-1.4
+5 0 obj
+<</Length 6 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 G
+380 240 5360 7080 re
+S
+5 w
+0 0 0 RG
+380 7320 m
+5700 7320 l
+380 7320 m
+1100 7320 l
+1100 7680 l
+380 7680 l
+h
+S
+0 0 0 rg
+q
+10 0 0 10 0 0 cm BT
+/R8 12 Tf
+1 0 0 1 52.6641 752 Tm
+(01/17/14)Tj
+-0.659766 -12.8 Td
+(18:42:06)Tj
+ET
+Q
+4980 7320 720 360 re
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 28.8 Tf
+1 0 0 1 518.488 739.2 Tm
+(1)Tj
+/R10 18 Tf
+16.0129 0 Td
+(/1)Tj
+/R12 14 Tf
+-272.304 -2.7 Td
+(in0.hello.rf.out)Tj
+-139.786 18 Td
+($cmps012b-wm/Assignments/asg2j-jroff-queue/example-output/)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R14 11 Tf
+1 0 0 1 43 682 Tm
+(                                                                          1)Tj
+36 TL
+(          $Id: in0.hello.rf,v 1.1 2011-04-08 17:21:44-07 - - $)'
+24 TL
+(          Hello, World!  This is a simple test of `jroff'.)'
+ET
+Q
+Q
+endstream
+endobj
+6 0 obj
+793
+endobj
+19 0 obj
+<</Length 20 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 G
+380 240 5360 7080 re
+S
+5 w
+0 0 0 RG
+380 7320 m
+5700 7320 l
+380 7320 m
+1100 7320 l
+1100 7680 l
+380 7680 l
+h
+S
+0 0 0 rg
+q
+10 0 0 10 0 0 cm BT
+/R8 12 Tf
+1 0 0 1 52.6641 752 Tm
+(01/17/14)Tj
+-0.659766 -12.8 Td
+(18:42:06)Tj
+ET
+Q
+4980 7320 720 360 re
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 28.8 Tf
+1 0 0 1 518.488 739.2 Tm
+(1)Tj
+/R10 18 Tf
+16.0129 0 Td
+(/1)Tj
+/R12 14 Tf
+-276.973 -2.7 Td
+(in1.simple.rf.out)Tj
+-135.117 18 Td
+($cmps012b-wm/Assignments/asg2j-jroff-queue/example-output/)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R14 11 Tf
+1 0 0 1 43 682 Tm
+(                                                                          1)Tj
+36 TL
+(          This is a very simple example of some text that should be)'
+12 TL
+(          formatted.  As the lines are fetched form the input, the output)'
+(          lines are adjusted so that each line is approximately the same)'
+(          length.)'
+24 TL
+(          Note that a blank line produces a paragraph break.  So we can)'
+12 TL
+(          easily use this as a primitiver formatter just like fmt\(1\), even)'
+(          if we don't want to do anything complicated.)'
+24 TL
+(          The present assignment does not require that any line)'
+12 TL
+(          justification be given.  Neither need any fancy PostScript)'
+(          formatting output be done.  Note that there is one space between)'
+(          words except when a word ends a sentence.  A sentence ends when)'
+(          the word ends with one of the following punctuation marks:  ?!;:.)'
+24 TL
+(          Many text formatters also allow for both right justification)'
+12 TL
+(          rather than ragged right typesetting and also for hyphenation.)'
+(          We do not require that here.  Also not that while sentence-ending)'
+(          punctuation works, abbreviations ending with periods are treated)'
+(          as ending sentences, which is not quite right.  And if we're not)'
+(          careful in formatting things, very-long-words-which-appear-in-)'
+(          the-wrong place can cause funny-looking line-breaking.)'
+24 TL
+(          $Id: in1.simple.rf,v 1.1 2011-04-08 17:21:44-07 - - $)'
+ET
+Q
+Q
+endstream
+endobj
+20 0 obj
+2135
+endobj
+24 0 obj
+<</Length 25 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 G
+380 240 5360 7080 re
+S
+5 w
+0 0 0 RG
+380 7320 m
+5700 7320 l
+380 7320 m
+1100 7320 l
+1100 7680 l
+380 7680 l
+h
+S
+0 0 0 rg
+q
+10 0 0 10 0 0 cm BT
+/R8 12 Tf
+1 0 0 1 52.6641 752 Tm
+(01/17/14)Tj
+-0.659766 -12.8 Td
+(18:42:06)Tj
+ET
+Q
+4980 7320 720 360 re
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 28.8 Tf
+1 0 0 1 518.488 739.2 Tm
+(1)Tj
+/R10 18 Tf
+16.0129 0 Td
+(/1)Tj
+/R12 14 Tf
+-286.289 -2.7 Td
+(in2.paragraph.rf.out)Tj
+-125.8 18 Td
+($cmps012b-wm/Assignments/asg2j-jroff-queue/example-output/)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R14 11 Tf
+1 0 0 1 43 682 Tm
+(                                                                          1)Tj
+36 TL
+(          Note that some)'
+12 TL
+(          paragraphs are very)'
+(          narrow and look)'
+(          funny.  It is even)'
+(          possible to make)'
+(          them very very)'
+(          narrow.)'
+24 TL
+(          Now we)'
+12 TL
+(          can't get)'
+(          much more)'
+(          than one)'
+(          word per)'
+(          line.)'
+72 TL
+(          There should be five blank lines above this line.  And this)'
+12 TL
+(          paragraph should be about 60 characters wide.  If we want to)'
+(          make an indented quotation, we need to use both the .ll and)'
+(          the .in commands.)'
+24 TL
+(                    This is a paragraph that is indented at)'
+12 TL
+(                    both ends.  This is a paragraph that is)'
+(                    indented at both ends.  This is a)'
+(                    paragraph that is indented at both ends.)'
+(                    This is a paragraph that is indented at)'
+(                    both ends.  This is a paragraph that is)'
+(                    indented at both ends.  This is a)'
+(                    paragraph that is indented at both ends.)'
+24 TL
+(          This paragraph is not indented and has a line width of 60)'
+12 TL
+(          characters.  This paragraph is not indented and has a line)'
+(          width of 60 characters.  This paragraph is not indented and)'
+(          has a line width of 60 characters.  This paragraph is not)'
+(          indented and has a line width of 60 characters.  This)'
+(          paragraph is not indented and has a line width of 60)'
+(          characters.)'
+24 TL
+(          $Id: in2.paragraph.rf,v 1.1 2011-04-08 17:21:44-07 - - $)'
+ET
+Q
+Q
+endstream
+endobj
+25 0 obj
+2311
+endobj
+29 0 obj
+<</Length 30 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 G
+380 240 5360 7080 re
+S
+5 w
+0 0 0 RG
+380 7320 m
+5700 7320 l
+380 7320 m
+1100 7320 l
+1100 7680 l
+380 7680 l
+h
+S
+0 0 0 rg
+q
+10 0 0 10 0 0 cm BT
+/R8 12 Tf
+1 0 0 1 52.6641 752 Tm
+(01/17/14)Tj
+-0.659766 -12.8 Td
+(18:42:06)Tj
+ET
+Q
+4980 7320 720 360 re
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 28.8 Tf
+1 0 0 1 518.488 739.2 Tm
+(1)Tj
+/R10 18 Tf
+16.0129 0 Td
+(/4)Tj
+/R12 14 Tf
+-276.189 -2.7 Td
+(in4.longer.rf.out)Tj
+-135.901 18 Td
+($cmps012b-wm/Assignments/asg2j-jroff-queue/example-output/)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R14 11 Tf
+1 0 0 1 43 682 Tm
+(                                                                1)Tj
+36 TL
+(This document has a page length of 20 lines and so should produce)'
+12 TL
+(several pages.  Note the page eject after the first para.)'
+24 TL
+(This is a very simple example of some text that should be)'
+12 TL
+(formatted.  As the lines are fetched form the input, the output)'
+(lines are adjusted so that each line is approximately the same)'
+(length.)'
+ET
+Q
+Q
+endstream
+endobj
+30 0 obj
+1003
+endobj
+34 0 obj
+<</Length 35 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 G
+380 240 5360 7080 re
+S
+5 w
+0 0 0 RG
+380 7320 m
+5700 7320 l
+380 7320 m
+1100 7320 l
+1100 7680 l
+380 7680 l
+h
+S
+0 0 0 rg
+q
+10 0 0 10 0 0 cm BT
+/R8 12 Tf
+1 0 0 1 52.6641 752 Tm
+(01/17/14)Tj
+-0.659766 -12.8 Td
+(18:42:06)Tj
+ET
+Q
+4980 7320 720 360 re
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 28.8 Tf
+1 0 0 1 518.488 739.2 Tm
+(2)Tj
+/R10 18 Tf
+16.0129 0 Td
+(/4)Tj
+/R12 14 Tf
+-276.189 -2.7 Td
+(in4.longer.rf.out)Tj
+-135.901 18 Td
+($cmps012b-wm/Assignments/asg2j-jroff-queue/example-output/)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R14 11 Tf
+1 0 0 1 43 682 Tm
+(                                                                2)Tj
+48 TL
+(Note that a blank line produces a paragraph break.  So we can)'
+12 TL
+(easily use this as a primitiver formatter just like fmt\(1\), even)'
+(if we don't want to do anything complicated.)'
+24 TL
+(The present assignment does not require that any line)'
+12 TL
+(justification be given.  Neither need any fancy PostScript)'
+(formatting output be done.  Note that there is one space between)'
+(words except when a word ends a sentence.  A sentence ends when)'
+(the word ends with one of the following punctuation marks:  ?!;:.)'
+24 TL
+(Many text formatters also allow for both right justification)'
+12 TL
+(rather than ragged right typesetting and also for hyphenation.)'
+(We do not require that here.  Also not that while sentence-ending)'
+(punctuation works, abbreviations ending with periods are treated)'
+(as ending sentences, which is not quite right.  And if we're not)'
+(careful in formatting things, very-long-words-which-appear-in-)'
+(the-wrong place can cause funny-looking line-breaking.)'
+24 TL
+($Id: in4.longer.rf,v 1.1 2011-04-08 17:21:44-07 - - $)'
+(This is a very simple example of some text that should be)'
+12 TL
+(formatted.  As the lines are fetched form the input, the output)'
+(lines are adjusted so that each line is approximately the same)'
+(length.)'
+24 TL
+(Note that a blank line produces a paragraph break.  So we can)'
+12 TL
+(easily use this as a primitiver formatter just like fmt\(1\), even)'
+(if we don't want to do anything complicated.)'
+24 TL
+(The present assignment does not require that any line)'
+12 TL
+(justification be given.  Neither need any fancy PostScript)'
+(formatting output be done.  Note that there is one space between)'
+(words except when a word ends a sentence.  A sentence ends when)'
+(the word ends with one of the following punctuation marks:  ?!;:.)'
+24 TL
+(Many text formatters also allow for both right justification)'
+12 TL
+(rather than ragged right typesetting and also for hyphenation.)'
+(We do not require that here.  Also not that while sentence-ending)'
+(punctuation works, abbreviations ending with periods are treated)'
+(as ending sentences, which is not quite right.  And if we're not)'
+(careful in formatting things, very-long-words-which-appear-in-)'
+(the-wrong place can cause funny-looking line-breaking.)'
+ET
+Q
+Q
+endstream
+endobj
+35 0 obj
+2920
+endobj
+39 0 obj
+<</Length 40 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 G
+380 240 5360 7080 re
+S
+5 w
+0 0 0 RG
+380 7320 m
+5700 7320 l
+380 7320 m
+1100 7320 l
+1100 7680 l
+380 7680 l
+h
+S
+0 0 0 rg
+q
+10 0 0 10 0 0 cm BT
+/R8 12 Tf
+1 0 0 1 52.6641 752 Tm
+(01/17/14)Tj
+-0.659766 -12.8 Td
+(18:42:06)Tj
+ET
+Q
+4980 7320 720 360 re
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 28.8 Tf
+1 0 0 1 518.488 739.2 Tm
+(3)Tj
+/R10 18 Tf
+16.0129 0 Td
+(/4)Tj
+/R12 14 Tf
+-276.189 -2.7 Td
+(in4.longer.rf.out)Tj
+-135.901 18 Td
+($cmps012b-wm/Assignments/asg2j-jroff-queue/example-output/)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R14 11 Tf
+1 0 0 1 43 682 Tm
+(                                                                3)Tj
+36 TL
+($Id: in4.longer.rf,v 1.1 2011-04-08 17:21:44-07 - - $)'
+24 TL
+(This is a very simple example of some text that should be)'
+12 TL
+(formatted.  As the lines are fetched form the input, the output)'
+(lines are adjusted so that each line is approximately the same)'
+(length.)'
+24 TL
+(Note that a blank line produces a paragraph break.  So we can)'
+12 TL
+(easily use this as a primitiver formatter just like fmt\(1\), even)'
+(if we don't want to do anything complicated.)'
+24 TL
+(The present assignment does not require that any line)'
+12 TL
+(justification be given.  Neither need any fancy PostScript)'
+(formatting output be done.  Note that there is one space between)'
+(words except when a word ends a sentence.  A sentence ends when)'
+(the word ends with one of the following punctuation marks:  ?!;:.)'
+24 TL
+(Many text formatters also allow for both right justification)'
+12 TL
+(rather than ragged right typesetting and also for hyphenation.)'
+(We do not require that here.  Also not that while sentence-ending)'
+(punctuation works, abbreviations ending with periods are treated)'
+(as ending sentences, which is not quite right.  And if we're not)'
+(careful in formatting things, very-long-words-which-appear-in-)'
+(the-wrong place can cause funny-looking line-breaking.)'
+24 TL
+($Id: in4.longer.rf,v 1.1 2011-04-08 17:21:44-07 - - $)'
+(This is a very simple example of some text that should be)'
+12 TL
+(formatted.  As the lines are fetched form the input, the output)'
+(lines are adjusted so that each line is approximately the same)'
+(length.)'
+24 TL
+(Note that a blank line produces a paragraph break.  So we can)'
+12 TL
+(easily use this as a primitiver formatter just like fmt\(1\), even)'
+(if we don't want to do anything complicated.)'
+24 TL
+(The present assignment does not require that any line)'
+12 TL
+(justification be given.  Neither need any fancy PostScript)'
+(formatting output be done.  Note that there is one space between)'
+(words except when a word ends a sentence.  A sentence ends when)'
+(the word ends with one of the following punctuation marks:  ?!;:.)'
+24 TL
+(Many text formatters also allow for both right justification)'
+12 TL
+(rather)'
+ET
+Q
+Q
+endstream
+endobj
+40 0 obj
+2815
+endobj
+44 0 obj
+<</Length 45 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 G
+380 240 5360 7080 re
+S
+5 w
+0 0 0 RG
+380 7320 m
+5700 7320 l
+380 7320 m
+1100 7320 l
+1100 7680 l
+380 7680 l
+h
+S
+0 0 0 rg
+q
+10 0 0 10 0 0 cm BT
+/R8 12 Tf
+1 0 0 1 52.6641 752 Tm
+(01/17/14)Tj
+-0.659766 -12.8 Td
+(18:42:06)Tj
+ET
+Q
+4980 7320 720 360 re
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 28.8 Tf
+1 0 0 1 518.488 739.2 Tm
+(4)Tj
+/R10 18 Tf
+16.0129 0 Td
+(/4)Tj
+/R12 14 Tf
+-276.189 -2.7 Td
+(in4.longer.rf.out)Tj
+-135.901 18 Td
+($cmps012b-wm/Assignments/asg2j-jroff-queue/example-output/)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R14 11 Tf
+1 0 0 1 43 682 Tm
+(                                                                4)Tj
+36 TL
+(than ragged right typesetting and also for hyphenation.  We do)'
+12 TL
+(not require that here.  Also not that while sentence-ending)'
+(punctuation works, abbreviations ending with periods are treated)'
+(as ending sentences, which is not quite right.  And if we're not)'
+(careful in formatting things, very-long-words-which-appear-in-)'
+(the-wrong place can cause funny-looking line-breaking.)'
+24 TL
+($Id: in4.longer.rf,v 1.1 2011-04-08 17:21:44-07 - - $)'
+ET
+Q
+Q
+endstream
+endobj
+45 0 obj
+1108
+endobj
+49 0 obj
+<</Length 50 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 G
+380 240 5360 7080 re
+S
+5 w
+0 0 0 RG
+380 7320 m
+5700 7320 l
+380 7320 m
+1100 7320 l
+1100 7680 l
+380 7680 l
+h
+S
+0 0 0 rg
+q
+10 0 0 10 0 0 cm BT
+/R8 12 Tf
+1 0 0 1 52.6641 752 Tm
+(01/17/14)Tj
+-0.659766 -12.8 Td
+(18:42:06)Tj
+ET
+Q
+4980 7320 720 360 re
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 28.8 Tf
+1 0 0 1 518.488 739.2 Tm
+(1)Tj
+/R10 18 Tf
+16.0129 0 Td
+(/1)Tj
+/R12 14 Tf
+-283.189 -2.7 Td
+(in5.badcmds.rf.out)Tj
+-128.901 18 Td
+($cmps012b-wm/Assignments/asg2j-jroff-queue/example-output/)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R14 11 Tf
+1 0 0 1 43 682 Tm
+(                                                                          1)Tj
+36 TL
+(          Thisisaverylonglinewhichcannotbebrokenandyouwillgetanerrormessageabou)'
+12 TL
+(t``can'tbreakline''.)'
+(          The message should be something like ZZ)'
+60 TL
+(          $Id: in5.badcmds.rf,v 1.1 2011-04-08 17:21:44-07 - - $)'
+ET
+Q
+Q
+endstream
+endobj
+50 0 obj
+901
+endobj
+54 0 obj
+<</Length 55 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 G
+380 240 5360 7080 re
+S
+5 w
+0 0 0 RG
+380 7320 m
+5700 7320 l
+380 7320 m
+1100 7320 l
+1100 7680 l
+380 7680 l
+h
+S
+0 0 0 rg
+q
+10 0 0 10 0 0 cm BT
+/R8 12 Tf
+1 0 0 1 52.6641 752 Tm
+(01/17/14)Tj
+-0.659766 -12.8 Td
+(18:42:06)Tj
+ET
+Q
+4980 7320 720 360 re
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 28.8 Tf
+1 0 0 1 518.488 739.2 Tm
+(1)Tj
+/R10 18 Tf
+16.0129 0 Td
+(/4)Tj
+/R12 14 Tf
+-270.743 -2.7 Td
+(in6.jroff.rf.out)Tj
+-141.347 18 Td
+($cmps012b-wm/Assignments/asg2j-jroff-queue/example-output/)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R14 11 Tf
+1 0 0 1 43 682 Tm
+(                                                                          1)Tj
+36 TL
+(          NAME)'
+24 TL
+(              jroff - format documents for display on line printer)'
+(          SYNOPSIS)'
+(              jroff [filename...])'
+(          DESCRIPTION)'
+(              `jroff' formats text according to control lines embedded in)'
+12 TL
+(              the text of the given input files.  Control lines begin with)'
+(              a period \(.\) in column 1 and all other lines are text lines)'
+(              to be formatted.  Paragraphs are delimited by empty lines or)'
+(              control lines.)'
+24 TL
+(          OPTIONS)'
+(              None.)'
+(          OPERANDS)'
+(              All operands are filenames.  Each file is read in turn as)'
+12 TL
+(              input to the formatter.  If a filename is specified as a)'
+(              minus sign \(-\), the standard input is read at that point.  If)'
+(              no filenames are given, the standard input is read.  The)'
+(              formatted document is written to the standard output.)'
+24 TL
+(          EXIT STATUS)'
+(              0)'
+12 TL
+(                  No errors were encountered.)'
+(              1)'
+(                  One or more files were not found or invalid commands were)'
+(                  found.  Error messages were written to the standard)'
+(                  error.)'
+24 TL
+(          SEE ALSO)'
+ET
+Q
+Q
+endstream
+endobj
+55 0 obj
+1972
+endobj
+59 0 obj
+<</Length 60 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 G
+380 240 5360 7080 re
+S
+5 w
+0 0 0 RG
+380 7320 m
+5700 7320 l
+380 7320 m
+1100 7320 l
+1100 7680 l
+380 7680 l
+h
+S
+0 0 0 rg
+q
+10 0 0 10 0 0 cm BT
+/R8 12 Tf
+1 0 0 1 52.6641 752 Tm
+(01/17/14)Tj
+-0.659766 -12.8 Td
+(18:42:06)Tj
+ET
+Q
+4980 7320 720 360 re
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 28.8 Tf
+1 0 0 1 518.488 739.2 Tm
+(2)Tj
+/R10 18 Tf
+16.0129 0 Td
+(/4)Tj
+/R12 14 Tf
+-270.743 -2.7 Td
+(in6.jroff.rf.out)Tj
+-141.347 18 Td
+($cmps012b-wm/Assignments/asg2j-jroff-queue/example-output/)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R14 11 Tf
+1 0 0 1 43 682 Tm
+(                                                                          2)Tj
+36 TL
+(              fmt\(1\), nroff\(1\), groff\(1\), latex\(1\), tex\(1\).)'
+24 TL
+(          INPUT TEXT)'
+(              Input lines are of three types:  empty lines, which cause a)'
+12 TL
+(              paragraph to be terminated and are equivalent to the `.sp')'
+(              command;  text lines, which are added to the current)'
+(              paragraph, and commands, which being with a period \(.\) in)'
+(              column 1.  White space is ignored, except as separators.)'
+(              Whenever a word of output is printed, it is followed by one)'
+(              space unless it is at the end of a sentence.  A word is at)'
+(              the end of a sentence if its last character is one of the)'
+(              characters period \(.\), question \(?\), bang \(!\), colon\(:\), or)'
+(              semi-colon \(;\).)'
+24 TL
+(          COMMANDS)'
+(              The following commands are recognized.  Whenever an operand)'
+12 TL
+(              of `N' is specified on a command, the operand must be)'
+(              numeric, and if missing, the default value is used.  `C')'
+(              indicates a single character operand.)'
+24 TL
+(              .\\" anything)'
+12 TL
+(                  `jroff' comments are ignored and are useful for private)'
+(                  documentation purposes.)'
+24 TL
+(              .bp)'
+12 TL
+(                  Begin page, causing a break.  Write a form feed \(^L\))'
+(                  character immediately before printing the page header for)'
+(                  the next page.  When the next paragraph is dumped, The)'
+(                  page title will be printed when the next line after this)'
+(                  is printed.)'
+24 TL
+(              .br)'
+12 TL
+(                  Break.  The paragraph is dumped and a new paragraph is)'
+(                  begun.  There is no empty line between paragraphs.  Same)'
+(                  as `.sp 0'.)'
+ET
+Q
+Q
+endstream
+endobj
+60 0 obj
+2561
+endobj
+64 0 obj
+<</Length 65 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 G
+380 240 5360 7080 re
+S
+5 w
+0 0 0 RG
+380 7320 m
+5700 7320 l
+380 7320 m
+1100 7320 l
+1100 7680 l
+380 7680 l
+h
+S
+0 0 0 rg
+q
+10 0 0 10 0 0 cm BT
+/R8 12 Tf
+1 0 0 1 52.6641 752 Tm
+(01/17/14)Tj
+-0.659766 -12.8 Td
+(18:42:06)Tj
+ET
+Q
+4980 7320 720 360 re
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 28.8 Tf
+1 0 0 1 518.488 739.2 Tm
+(3)Tj
+/R10 18 Tf
+16.0129 0 Td
+(/4)Tj
+/R12 14 Tf
+-270.743 -2.7 Td
+(in6.jroff.rf.out)Tj
+-141.347 18 Td
+($cmps012b-wm/Assignments/asg2j-jroff-queue/example-output/)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R14 11 Tf
+1 0 0 1 43 682 Tm
+(                                                                          3)Tj
+36 TL
+(              .cc C)'
+12 TL
+(                  Sets the control character to C.  The control character)'
+(                  is that which appears in position 0 of the input line to)'
+(                  signal a command.  Default:  `.'.)'
+24 TL
+(              .in N)'
+12 TL
+(                  Set the indentation to N characters.  This is the number)'
+(                  of spaces printed at the beginning of each line in)'
+(                  addition to the page offset.  Also causes a break \(.br\).)'
+(                  Default:  0.)'
+24 TL
+(              .ll N)'
+12 TL
+(                  Set output line length to N characters.  The indentation)'
+(                  is included in this, but not the page offset.  Default:)'
+(                  65.)'
+24 TL
+(              .mt N)'
+12 TL
+(                  Specifies the margin at the top of the page in lines.)'
+(                  The title is vertically centered in this margin.  N/2)'
+(                  empty lines are printed, then the title, then N/2-1 empty)'
+(                  lines.  Default:  0.)'
+24 TL
+(              .tl 'left'mid'right')'
+12 TL
+(                  A three part page header may be specified for the left,)'
+(                  middle, and right side of the page.  If a percent \(%\))'
+(                  appears anywhere in the title, it is replaced by a page)'
+(                  number.  The left part is left justified within the)'
+(                  output line, the right part is right justified, and the)'
+(                  mid part is centered one the entire output line.)'
+(                  Default:)'
+24 TL
+(              .pl N)'
+12 TL
+(                  Set the page length to N lines.  Whever this many lines)'
+(                  have been output, a page eject occurs, and the page)'
+(                  header is printed immediately before printing the next)'
+(                  line of text.  Default:  60.)'
+24 TL
+(              .po N)'
+ET
+Q
+Q
+endstream
+endobj
+65 0 obj
+2589
+endobj
+69 0 obj
+<</Length 70 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 G
+380 240 5360 7080 re
+S
+5 w
+0 0 0 RG
+380 7320 m
+5700 7320 l
+380 7320 m
+1100 7320 l
+1100 7680 l
+380 7680 l
+h
+S
+0 0 0 rg
+q
+10 0 0 10 0 0 cm BT
+/R8 12 Tf
+1 0 0 1 52.6641 752 Tm
+(01/17/14)Tj
+-0.659766 -12.8 Td
+(18:42:06)Tj
+ET
+Q
+4980 7320 720 360 re
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 28.8 Tf
+1 0 0 1 518.488 739.2 Tm
+(4)Tj
+/R10 18 Tf
+16.0129 0 Td
+(/4)Tj
+/R12 14 Tf
+-270.743 -2.7 Td
+(in6.jroff.rf.out)Tj
+-141.347 18 Td
+($cmps012b-wm/Assignments/asg2j-jroff-queue/example-output/)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R14 11 Tf
+1 0 0 1 43 682 Tm
+(                                                                          4)Tj
+36 TL
+(                  Page offset is N characters.  This is the number of space)'
+12 TL
+(                  characters printed at the beginning of every output line.)'
+(                  No characters are printed if the line is empty.  Default:)'
+(                  10.)'
+24 TL
+(              .sp N)'
+12 TL
+(                  End a paragraph and print N blank lines.  Each blank)'
+(                  input line is the same as `.sp 1'.  If N is more than the)'
+(                  number of output lines left on the current page, behaves)'
+(                  exactly like `.bp'.  Default:  1.)'
+36 TL
+(          SEE ALSO)'
+24 TL
+(              nroff\(1\), groff\(1\), latex\(1\), tex\(1\).)'
+(          BUGS)'
+(              Very few commands have been implemented, the most serious)'
+12 TL
+(              being the lack of a macro preprocessor in order to make)'
+(              typing in the markup language less tedious.)'
+24 TL
+(          RCSID)'
+(              $Id: in6.jroff.rf,v 1.1 2011-04-08 17:21:44-07 - - $)'
+ET
+Q
+Q
+endstream
+endobj
+70 0 obj
+1673
+endobj
+4 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 16 0 R
+/Font 17 0 R
+>>
+/Contents 5 0 R
+>>
+endobj
+18 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 21 0 R
+/Font 22 0 R
+>>
+/Contents 19 0 R
+>>
+endobj
+23 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 26 0 R
+/Font 27 0 R
+>>
+/Contents 24 0 R
+>>
+endobj
+28 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 31 0 R
+/Font 32 0 R
+>>
+/Contents 29 0 R
+>>
+endobj
+33 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 36 0 R
+/Font 37 0 R
+>>
+/Contents 34 0 R
+>>
+endobj
+38 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 41 0 R
+/Font 42 0 R
+>>
+/Contents 39 0 R
+>>
+endobj
+43 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 46 0 R
+/Font 47 0 R
+>>
+/Contents 44 0 R
+>>
+endobj
+48 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 51 0 R
+/Font 52 0 R
+>>
+/Contents 49 0 R
+>>
+endobj
+53 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 56 0 R
+/Font 57 0 R
+>>
+/Contents 54 0 R
+>>
+endobj
+58 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 61 0 R
+/Font 62 0 R
+>>
+/Contents 59 0 R
+>>
+endobj
+63 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 66 0 R
+/Font 67 0 R
+>>
+/Contents 64 0 R
+>>
+endobj
+68 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 71 0 R
+/Font 72 0 R
+>>
+/Contents 69 0 R
+>>
+endobj
+3 0 obj
+<< /Type /Pages /Kids [
+4 0 R
+18 0 R
+23 0 R
+28 0 R
+33 0 R
+38 0 R
+43 0 R
+48 0 R
+53 0 R
+58 0 R
+63 0 R
+68 0 R
+] /Count 12
+>>
+endobj
+1 0 obj
+<</Type /Catalog /Pages 3 0 R
+/Metadata 78 0 R
+>>
+endobj
+7 0 obj
+<</Type/ExtGState
+/OPM 1>>endobj
+16 0 obj
+<</R7
+7 0 R>>
+endobj
+17 0 obj
+<</R12
+12 0 R/R14
+14 0 R/R10
+10 0 R/R8
+8 0 R>>
+endobj
+21 0 obj
+<</R7
+7 0 R>>
+endobj
+22 0 obj
+<</R12
+12 0 R/R14
+14 0 R/R10
+10 0 R/R8
+8 0 R>>
+endobj
+26 0 obj
+<</R7
+7 0 R>>
+endobj
+27 0 obj
+<</R12
+12 0 R/R14
+14 0 R/R10
+10 0 R/R8
+8 0 R>>
+endobj
+31 0 obj
+<</R7
+7 0 R>>
+endobj
+32 0 obj
+<</R12
+12 0 R/R14
+14 0 R/R10
+10 0 R/R8
+8 0 R>>
+endobj
+36 0 obj
+<</R7
+7 0 R>>
+endobj
+37 0 obj
+<</R12
+12 0 R/R14
+14 0 R/R10
+10 0 R/R8
+8 0 R>>
+endobj
+41 0 obj
+<</R7
+7 0 R>>
+endobj
+42 0 obj
+<</R12
+12 0 R/R14
+14 0 R/R10
+10 0 R/R8
+8 0 R>>
+endobj
+46 0 obj
+<</R7
+7 0 R>>
+endobj
+47 0 obj
+<</R12
+12 0 R/R14
+14 0 R/R10
+10 0 R/R8
+8 0 R>>
+endobj
+51 0 obj
+<</R7
+7 0 R>>
+endobj
+52 0 obj
+<</R12
+12 0 R/R14
+14 0 R/R10
+10 0 R/R8
+8 0 R>>
+endobj
+56 0 obj
+<</R7
+7 0 R>>
+endobj
+57 0 obj
+<</R12
+12 0 R/R14
+14 0 R/R10
+10 0 R/R8
+8 0 R>>
+endobj
+61 0 obj
+<</R7
+7 0 R>>
+endobj
+62 0 obj
+<</R12
+12 0 R/R14
+14 0 R/R10
+10 0 R/R8
+8 0 R>>
+endobj
+66 0 obj
+<</R7
+7 0 R>>
+endobj
+67 0 obj
+<</R12
+12 0 R/R14
+14 0 R/R10
+10 0 R/R8
+8 0 R>>
+endobj
+71 0 obj
+<</R7
+7 0 R>>
+endobj
+72 0 obj
+<</R12
+12 0 R/R14
+14 0 R/R10
+10 0 R/R8
+8 0 R>>
+endobj
+12 0 obj
+<</BaseFont/IJZSUB+Times-Roman/FontDescriptor 13 0 R/Type/Font
+/FirstChar 36/LastChar 120/Widths[ 500 0 0 0 0 0 0 0 0 333 250 278
+500 500 500 0 500 500 500 0 0 0 0 0 0 0 0 0
+0 722 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 444 500 444 500 444 333 500 500 278 278 0 278 778 500 500
+500 500 333 389 278 500 0 722 500]
+/Encoding/WinAnsiEncoding/Subtype/Type1>>
+endobj
+14 0 obj
+<</BaseFont/MZPMAE+Courier-Bold/FontDescriptor 15 0 R/Type/Font
+/FirstChar 32/LastChar 122/Widths[
+600 600 600 0 600 600 0 600 600 600 0 0 600 600 600 600
+600 600 600 600 600 600 600 600 600 0 600 600 0 0 0 600
+0 600 600 600 600 600 0 600 600 600 0 0 600 600 600 600
+600 0 600 600 600 600 600 600 600 600 600 600 600 600 600 0
+600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600
+600 600 600 600 600 600 600 600 600 600 600]
+/Encoding 77 0 R/Subtype/Type1>>
+endobj
+77 0 obj
+<</Type/Encoding/BaseEncoding/WinAnsiEncoding/Differences[
+39/quoteright
+96/quoteleft]>>
+endobj
+10 0 obj
+<</BaseFont/QUCTYP+Helvetica-Bold/FontDescriptor 11 0 R/Type/Font
+/FirstChar 47/LastChar 52/Widths[ 278
+0 556 556 556 556]
+/Encoding/WinAnsiEncoding/Subtype/Type1>>
+endobj
+8 0 obj
+<</BaseFont/HQDPPP+Times-Bold/FontDescriptor 9 0 R/Type/Font
+/FirstChar 47/LastChar 58/Widths[ 278
+500 500 500 0 500 0 500 500 500 0 333]
+/Encoding/WinAnsiEncoding/Subtype/Type1>>
+endobj
+13 0 obj
+<</Type/FontDescriptor/FontName/IJZSUB+Times-Roman/FontBBox[-70 -218 775 727]/Flags 32
+/Ascent 727
+/CapHeight 674
+/Descent -218
+/ItalicAngle 0
+/StemV 116
+/MissingWidth 500
+/XHeight 461
+/CharSet(/A/a/b/c/d/dollar/e/f/five/four/g/h/hyphen/i/j/l/m/n/o/one/p/period/q/r/s/six/slash/t/two/u/w/x/zero)/FontFile3 73 0 R>>
+endobj
+73 0 obj
+<</Filter[/ASCII85Decode
+/FlateDecode]
+/Subtype/Type1C/Length 4592>>stream
+GarVOGu.GmR_LR(kGkI4kpXq;QaXMChfH];Q#:FT>T^J+J1)V7":,,CerYt.P->qW/0olplsWCM
+6r_).D3nR6SpS4AApSI]2m<*Qc^[WKVeU+VVWNr-W`uHLF3aTqht`SqpL=e6V[tBpb:?P^,0F"/
+,#*ngomAEf(U3*6VU,_(4)jIqc"&SB+V@\oSdE*_ctdC6#IAW!UK;MuHT!Xl8$H-t*-4c'<2N2&
+-R<=#/dVnGoV\NYQi6A;X8MqpI?,oXB>o),-psMdlFWF/aVIIDZ4p/Njqk`4b\i8*I)7g.U6$[5
+pr:=mM;gY<_IFmdAD`qeM-)*gB)=1eplk/]5JL4AR@eX!`$ra5147t'pY@4ipC6[&&LCsZ@akAG
+$:,4FDG?D=daBp,ZfJAOa%sX1iY)sD8Wo>".ouMK>.o+8B-.f*,%<cVJ-[JgLkA)D&OqEe&]?Te
+0G-Qd-[$%_M-\&;@LquF,*:GMlm$*SZ\eF43J9?-,P]2^@NN?/(,8*$V@k*4&aLZBl]d*%<,<U;
+S,LN022C15E&l]%me>WIi#nlW:X]BB%8H_0HHYree*g(^2'['0eVmkKQ?Y:3S28Vg(XAJ.LFs9\
+Rf:[QRLHC_+"Pgp&g-%0qJ.05(WX5:#3*VUgrL[*%Q[Ju,39<D]r\f^5n0T'*9?1P?>>gpe"BkE
+e!9af`FKIaJ2\BWj!0*0Lr=2V/@lBRl1nC_cc4B+EHVf)LgO:s/#e,rgT!;$i=Z,XFR"Y`;M>aS
++JN+PLOCH5!U%ceg:JMRTin[V_BJu41s3_-9lWpIUdAjP(J(>%0;G^gNKP[lG6slC6g52:=;RDV
+?p*`1oP-=cr?kSC'-!4a0ml+8D^cI]"YUW9Drgln5EHH$>PSW@:MHX&n`rj<6HhHuCJ.o[o0>2[
+*R28*muag!h7P+GCuLU^AXrn!ke$%]?[4jU7p-MsGU=rSODc^*6RsF/bke*aRm[5el#[/h,]Bq#
+R/l\X*S=8aWIhTMZjQFP2<tJjM5L<)VP6l5HTQ]So>0Y_Y\<;V0U@H)-Ybu5!qbY-r/Rh+_[eA9
+`[#.<fb/6\Up&f!JnfE[$FrHL]=j[];""*@SdN0)2t<Zs;QOl"`,h7(WVBuirQXVof<2KP+/86*
+!"UPYgJ&s^JeI=J6)Zs(!XD<nPn%WJ5O`)NJOZ9(Q'8#/5RE\.jK@S;m'#A,%)PXJT&8m.g+AhK
+-CDG_Ej6[FZd&,iIW_'d`"'m)CMkt_b5aY@0Ec-YHl/A]=..JCa%2Eu]$?8A<E`,n.Ue=Jb34@d
+Za86=Sa@'1VIj^16N$sZV;YP`RKGQDOp(VNXc$NEdPQ8W]SZRTcJpKDhk=ua"m?&KNa#JIB.,Ab
+J-$tFQg-%k?EGM(X#t78`fQ",K3]jr7oIs%HKDOP:a1]jQ:?ZVNlE&IG"Z/*ArOsQIL`O6<aNr,
+jTSdqF\rg9Q<L&qXe9RJj4i2RNb!8#n"VRV>?[e:JSg!i:A=6[LNmqTF6cU"..,RHm6E#2QO3;*
+A>-p:]K;#`agDkM)23f-A"Gt>$B9nd/Kf>bFU"VW1`mL!'U9Dq]K;JLAa]DTR-PP`232ng2-&>o
+8pqHh`2hU0;5bT+T)Zh'PioFc(]AW]]%[&<382K!WMMC?pa0mCY%j=jYOQAClW/V,Km#UA9O]T(
+;Nk:dP@[=m.?KK]mMVgF[HK&GX9RhqX&Uj2`"c\?q1ueWm&t,=':q5%f`67_j[CDs^8d+A!iEre
+/pa:N7=W?_70RuG2?QoFPqbWR>D:OSetYq#0SIdrJ;mRkF(WjWUK-5_JR.FG1Zt-H.M[CldUrld
+0!H)DTM5D*m$=5`B%Lo8BI^=O)^E]2r6!'O@Sp4D$>=G3>F?s"q#$(nea_b@8glC2$>[lddrYQO
+;`@fZiF6&B=nDan=NEARVqLt4%qs)Zo6=p4IGaOZC9:&2a\5(p&;:Sp3,3202.uU$e/s5%nuYE6
+10sIJjp"msH#Z9XR4>KX>G.C#lY7ELd$>Rsg^!>+]up6i;3kH=L.NXD,%rD$`mEt)d2PEDj%r0M
+p?;`D%0#*^bS"7(1kNZ1Q`\M/9CoG4R4.G_6^7aurH'-M3CJ1\b=/USZ;B^h']nCJTY*`LK\o93
+5!L0nqR2EQXqH:!Y?$47,+B1ETiRYJ/hn6O$B8<XnrXD3HCt@@43S]k9X%9jXIo[HBKD3g`#nka
+0(r($Xu@U@$<64&-]i'n*0k-6_aQ^WZ[^!/ji11C1^]nm:lnZ;6,KkPN*EAFj%00QCp\S1'Alb-
+X-2QdeHf(E3OtfgU`>gH3FL*iV;B]%an)<@aQIb("au&9DgqNH^>OYhEaeamrc<L_:I[8$=dU3I
+k^Veu;iB"dL\ip+S^m:u9eSh^r5]lb)'P+6$[d]E5Hil>^<`L2[o&Dn(29>6!=E!Ll^P'F34JlX
+KKS3QFZ<R9$Z76[gnuY6qs6RBB:lE1R0h.2\!TZo%6`OlC7@KZEAmYncUXUfEb^-!\-Nj:1*N9h
+G5=,7$'E@uI@sK"$S3ThciV=Q<rI"FqZ0Q\XQfr+DdWb2i'mG>LMP;%X/B4cHDj)Z=Atp0T[i?B
+noT:0,WCB?6aIBf_Lk@F/fY=u4P./s;S*M(A'rKH#(GXqR++A<!b9q_`tYE[h*j7nFG$(_[D"f;
+/#=o!i=J*[O"*QWUW6s#Tg+BfpX^SXlJZkR$juM<[#AAbV!$eJGQTis*G`c@m.b92MKQ9)akZ81
+dogoR_\(Mc4&7_5lVm,&2/.5^/L6hNl^I[E>PIRqQUR`JC!l__`F"`+aa_4cEoApI2S_,t*)>F!
+VQ5:Z8b=U'"[&$A3el4qd(C-Ye6h0H\aQ9Ja),]PSOEAEqnE8SW%+"#ZRe9qS#deCOt3sFp]\'^
+^.G&>'FL\aPa&216TNB!CJW-_+-IqdGV]1goW*aC=pIQOV`JV*i$ipBkht#IbcgXF028pm)X-JS
+D6m?&c,F7u^;s/V#uAD=B4kGXgXus)@(WC0h*kejS,)u"__^<V8H.DH8I4/mLH0.%gP;6ANkl=-
+!kmN!GP;Sk[OP3jKQW.F-l>Gq9MLK"+8b_HiB&?ii%jW%j(KMJZW63HIrMom[NCYW/I=KeHj%5j
+H;1X6SJ2@9)(k=fM'BbXZ'R[>&=]ph8r1K;WD'BfcTddIOEp-*]VLL[*:f%75DFKJ%,_V*?>r)L
+?K)+(Q$PN5Smc`\lO7F0$dJV*qoS<!0m*9t$Lh_\Q(]04;f_S07u7rfRbpju'n?=2h+gaHoM2Wg
+,2WUnP6_11*J(NlZHQ"AZn^%chUL3Gc>6+L)!a/hB6*9Aj1i5arW7f$;1)<qJP;3gJ:]68M@sR$
+Zc!%O9i`QmE]/H;$e'6=UL'LpL+9,\.iT0sC25H>H4"4anj)>K2!+QY[#!`?(,<Aqs7H\hXM9h&
+lR1B`8o@Xc]nGX</t8;,+_^q2WAQsg#/8@hK$(JZG_Mr#JqDE<8s+S#Or4Js9K3fJZ6mRgOQU'(
+1Q'CRB(7:T<blRuKe#;E<!S=!)sL*/?E1#Wr?UY3Ygd,<Rp2?,eFl4LW%jFV=:-9/FLi#ZZne0p
+UdS2jDj%%#FI_Tu)i!EUSSSC^',ZFiT-%lW2G'G^XYckR;[<1'kVtiVj1b@F3$Kq69W/dA[tVY3
+-rk0k+s/RL/g?&_F".4>BINcoWui(_q\`NSKSj]!=f>$W@\Gg^i2<BK8Q&d@gH/VDg,mbe;`q<^
+]-`6UlG2Hbrba>hr7=]hGFk5'DOpE;AMq4lNn8)XAemaBX>2sopn.lpLo3P_lGh;u*BY3f1#j1b
+#g_#ooj57N$BYnE,Z1Wbq@Lsd(8gWBcSAHF_P1`$FmGe%'?-Z`Z\Ub1]rUNneb9p,iX%L]@N==^
+IN15L=&bHOQe%R?bAE>WYc<kc2hqE-b0S;V;rstd@m+7<GCkf#\Me](Ujr&Z5C>jX4^atU-ePd?
+/`^[si^5PJa.NFqF4!IarPo`QO5L\f5<aSp;<X^T'CiqMYprne]trbcnFsZ"4-1F($X(4nC;p&"
+']+\!3Egb.>H9CKl"ro;H)%]A^3n-=.P3rsr(lP7BJ0;X9e[q+p#%J'n$g@$Mr2'ipME)PE0117
+p.0H$8UB_P$VfJhUHS6*5)S:L_",o/o;Ng[o$"+M]d]F:-fSSNehcAn%#Y7cnj6"$J3e6[Ld:m7
+]l4:gFPiBYEi$<$7@;kpBk-:BW`klE3g]AUr-mD>&Sh)W_\db(n)k*$*f1pFBu8=<4@;O(VPap1
+H=!98T@e8,j;'rAl@X/d7:>,u".0JdI(6V%c'cJIU+^07A/+`a'<`7Dnc#uc0o4+5Lk;Q`[$4E4
+"Bs>Jio@P@5;<e$kMRe/qf]%IH\kd0[('C:WhH<=aqQ_nDY1c[pE8m&2SFr"j<HPo]47AsD<*9g
+&-t$^o9.P?1AM4n"-;"Y%`GhL)ccW-OLQ)X0*sk0nHZ&1F1GYs&*h.BagF;3!ZouUm="BXmeYE%
+4RC2Ye%3t'b?T;S>nRm)EW+SCg<W=&B*Ee&<I"rlL0&\ImSoC`pfIHQi!((S$hkpbDc2_(j=WLK
+KgK)#Np4l&FBH2gT%A84,`)I)W4#Fb~>
+endstream
+endobj
+15 0 obj
+<</Type/FontDescriptor/FontName/MZPMAE+Courier-Bold/FontBBox[-21 -205 623 695]/Flags 35
+/Ascent 695
+/CapHeight 597
+/Descent -205
+/ItalicAngle 0
+/StemV 150
+/AvgWidth 600
+/MaxWidth 600
+/MissingWidth 600
+/XHeight 451
+/CharSet(/A/B/C/D/E/G/H/I/L/M/N/O/P/R/S/T/U/V/W/X/Y/Z/a/asciicircum/b/backslash/bracketleft/bracketright/c/colon/comma/d/dollar/e/eight/exclam/f/five/four/g/h/hyphen/i/j/k/l/m/n/o/one/p/parenleft/parenright/percent/period/q/question/quotedbl/quoteleft/quoteright/r/s/semicolon/seven/six/slash/space/t/three/two/u/v/w/x/y/z/zero)/FontFile3 74 0 R>>
+endobj
+74 0 obj
+<</Filter[/ASCII85Decode
+/FlateDecode]
+/Subtype/Type1C/Length 8695>>stream
+Gasar$!:-X[QX_4Ep?ohZ/C]df"!8FD:R@?eS7OKN[Q"c"GAHTbX97/$%r`n,QU45@1"+[5uA4/
+[8*hkDlpFLmBsWUosV<\?=U&'5/'b[HTMOB[dSW0J2?P#XnD_[?YctR-O57B@Z=Y@9T0X<`[uF>
+(_pMjY_\^a@\u1?di=QJcni^TS(Z6rY=du_q.!N7N$B2"<&8[b&n`Q`7<j5C'Mfhk=fdk#Z?8K2
+C7HCt4Mbm[Y3ijacCb,/s-:PR<ig8pT5).$[QZNS&/O:a$ic>')C6(dLW1UPiO04\*>Kk+Fpj4#
+'ns]?"bhV_L0.dR$&T(LFP@po&r8rm,e#f"k.3/7n6!='Ik:1,7.3p1GM==#&\<7u=gg$J$:,5-
+f#I'%>Ni[ojL7>HS[eHS$1B3Y8kKRcg$b1E]Ho/J47p2g>Jn=e$[+r)N8,00'><.MmjeDHp+9M`
+kcoBSdT;dKk4\ZDjmFX+IUhO,3NM<UKKJ]FZ%A?/CaE*p0,*)r2i*m?G%)5lK@ic>+a+H=#p3Ut
+Z('B5]M8/6l\G^t+0hD>8GEke&;u>RKEncE=A6A#Ca,/XT#@\JAmuY:7D)*++^QP/M<2Z*i_<l5
+nJ3j>=A=`%-4jsL(C=`+92$UE@M82D_'3+i#JuaF,c2,h@OaYV'_)7`7Z8P(Ys/OBiWO&3_oiN+
+*BB--ST_4Xfcf^/Ul#gT;,m8tdS[[)'1Z,_H"ft$fVN(B*iBi>GPm:(!>?Ngf\t%tmbmNm[W2=[
+ic3\9rqiM&QNCL)k>LD&_6nT0i8d,##c@M`p$f>Re+0B,Re@J7%Sskrn@ElUq;_8prhjZ"h<n$f
+F*b=mlg?:Ze(cV$=?RmK`fZTL?iG2F@]"/-dol4I5%&gWa8?"_=3PWC_.7.4YJMT-m5B+h)%..(
+18RAc9*8lnXHJgke;CPaFb#'kZ5SrDW/<(SC-BoGS\-.6/QKn"KE1g(aY#!!'\V?.b/D!^8i6rM
+Xq=L^8[PFO)[BpK[]=7].\\8lP6YBK&#tbXa9tCd8g%oQYbA7g7Z5BliD-gm_$9\:3Ps_P0/JPD
+^Vi8=G;G`P"f*.!JumapK5%;M"<qX0Noa,/WoV)!H*/^1G:O;k\4idah27DE<fL9AA6(#K,e8-F
+SSli!9tAiBi5\>,3$F-XOa+F7q#;>@>,imR15#lq3T+YpM;Z8`Fo0AVJXo%KnIM:oMe+pX/;A]2
+1gCI&O6"nlJnA)W;cKRI-X07k!qARe,"![n!sqNJA2L/:6nF[++KJ)7/dF8:rG*&Jb(EZD4HO:7
+BlnK4HS/QT[^_uqaH(`l0dXtWFM:pmgSX"=iuUsu'GUHPa1+6$A&<;N;aIdkbm?b/CJLl<c+!,V
+%,K0I]%Qml1X%Ok`tj1$Z^I,@nQ&0R)n'"K;J6TliYg((E7EJu*aTY)X_Zs<REjA5;qL)[/cQNi
+H)S7I]l][lrgm)k.*\k!<!?u*dqLc^\oOqqN=QNgMd".kCm7X]G;t:t!jjB@,o$*Q;65h<T,]1K
+h8mL7':WEqR<?@TDj_X)-,t^0EtE[6E^>m3q(f=)Oh\_(O@J:E1nC6tS,WE<f!T9OCg42U_j)mh
+]QO$?^3,?-Y^lrcnIWIO>T,5M13N\D,c@m_1tu7]/!3t>[>9b\\EefgEJ&?6RYkB.eQ?!U!G\a>
+b/CHg5/%.)A\Y:EaP,/(4LbI7fP%-07l1:eb,l^X_k*eT/3,O$%bUTK,[PB"R9=&9(n==Q(EUd1
+k!PSabIB?5[<i6aLdn(XkZ.U/%XJ:R5`Y?9cT\=El/]8'<>e(SeW<TXb/hfPb2S82!+[P=,f0&"
+J3mc&\nU<ai&pu9m]Wa01._SO8Z^#^ME_e^TMWa1EilVekWjho;dQ1N-jB:n5<,<":Sh#h>`T5[
+=IhK!%:gqE;D$jZK$9<dL'fa&F#31&(4H'iqL!7[po9$1Ies_;L\-O4OP?'DEKD:B'V[QH*r5np
+m8.EX$XJh&G]8mMm`IA,CUCmdaVmu6!58f@Q)"SgJD*K0\Vrb$*119VjJJ`Q"!E2AB8c5aV;C%;
+>H6DHWd.'d8UUZm_OKMQ=V&bRN7StUVK!/A@fOmJ$@7U4iX4a816"[Le+[cf%2u0@iC4<gfY_:H
+B)LR*%P[%1.+PV\1c8S`ON=8d$>FAnLniO@qBj"tBJMYuDPfc7;Br;WiS30/8:D(5X?CpElV-+l
+E/-L!JW#X(*/eG!:cLHh8uTh"e71U^&!pn<d"-6=*#0P*D\D9j#CEEM%bQsW/rY[FN6$AW%!I<G
+%*t=^R<@ri2Jc0'Y.W*7-0^efT4?1JE@b_7F_!'P*CS;'G7h6DoK*Y\o>6!gc'XP=U%,mC5lT;4
+\rQB01_7%Ds89r^I:PrP9Hl\R73E$@5sV*"X,<lJB`f\iWbQ=L0ij]!a*[acB0>ISRl>>C1XHBh
+d,-9C&76P1P,TaRm#MLc5;^/H5rJtH6"-?GV_PSWKK0bD+9VL+L-__^%5UV20*f6C*TBaeJI453
+E*gjCcEMuR7nPr"5-!pEBm-N:5%Pqs.jV(><G/A/'k1AI.&?*PE]F\/]91e_!`3W<C3I<!"(pR&
+h1Em2A"b>^)FuleZoFh!>d_foglII<l*eEBfUBG%]bK6"I#:1:31JuTI.a\<FY-P!5a,K9JT#.9
+!S("NgK:F'9@EF,N0.]1^^l*q^%!/oa.a*;",qmCNm%QLP:fMXb4$B9Vp^f<93KKocKUK/+sf!5
+MOYJ\\R4H2@?+pRhcP"Y(qN<6+"412oSRC/Grj$>&q#j$mg:O'`pdMo`S+G,IVb3i\]lK6*1JH9
+@\(.EPQOooWOa>9SFeSn)?'0WDn9CR^0epAed%PEd;2i6o@&W9`DSQi;jD"fk>%CTac/D5%H7qU
+[YFOS34r&)GNhS^<Y+K_g!pk/lS)tpLGH!VbiT@FBNg5I+*[hD$:.UT1&Vs!6J^RMDF:nTeD,FD
+G7!%*h2.S><>5GP$C.]b$!!Gl&fa&AEBkOV6B/kIr"L9=B>t0Vqj$RN.tD9&cYahsW3p"j[@RKW
+WS_q_n>u)&1&hGbJb'WV4PafJ@PaO5P7NN7-Na94_bG:o%R=3`9du`0pW9+>,Kn"pQ%E+QBfKaM
+]_$gQ#`9m7]Bo^Bo3^g!cgm+]bK<*keX0;db#7<CdWkX%r3Lc9-kM\TQ7GUKeY(Wn?!s`O`Yhl\
+BgnC@@A0LEF9uS^k*Of0`n1lV>]8n,10i7,=B,Zr#*Hs-iSMEKYI<qM"`d*Fd(P%4".47%)KX!C
+0ib3MK2`B5.f'>g!jAj+032c2)A5$cP$Klf=9u.4imNr<YlT!Wekt02lUgO$)40:iW:ttQBDJbL
+B=,L5W_YTZ:n$jI_bYld<Il1</b(2D:4\=r7GE6Zo)BM=TF/*+ahFibP9`gWrHJVH%Zlb8ic)GG
+B<T?=gf_NsUgM>Q,Wff6-L5(;hU,qt2UOQ+LZCl`N^bQ:aY"Kor2iFU0'(@^hD`'4KQ!M*fMCui
+p]Gm($t:/db4>kc$s:j]E"dX=D.5^PrrIU+'j-(0FcZtIP">bPFRNhDC8-@i7LQlf')#5o4gZI;
+/uT")]GakRH=4=jNj>Tb[L$dX43!B9Ren-%dH,#hL01>Yf?DMfIYWg$(,feBQV$ZM**1dFP*+1f
+)"&Vu>'gj@pKa8Nk0H]?1^K8CR-MUZ[C5"TT%?un?=X,eN@'L4T>9,e&lfbTQ@KFLqg@EmP&Lt$
+XhEorkiu/br>?[NBg-X5G7&Mhm/g6pKYHU4[3M<N[c]&"pjGV@?@^-SFFaq(K`g\j]/,M!3tm4Q
+P)QCLDdO=LZhdS4mRgPWJJX@4\Im(o5o6&I$PP?19b\!g*H3"+ek+&=Ac+V3IGl3EOJIC0=$42c
+?f5=m+&HiheXF35KX0#cXR$a]c^\Z:%9IuVRW+O:(h<35RlWm-&*q<H$9e]]Wk1=(:=WVS2o3Q)
+<rtDb3d4Q,!UkTQi]mMJkPEV>5YG^QYV*(F!$Zq9>n@f"'F?Pg!c"_/`NN!>;gggDZ-cNoG(<2<
+*`c<lC5g6W_nrsfH:/@k8*&bQme.78lWu`j7)>Er:#r:=6e-i9D(\/;*1O0BW\>?s$gF4<@*]mS
+*BQ@!a:U;#e[sK[9Ok_0p)pUT3IQAF0;WMc$Q=ZW&IIKYk#^=&f)[*J`WbUWdT]hAg76VF.R(X!
+g<NBfZ#kdmb*"&"Gp*BAc$!p"q<kT:%.@r'NaVihs(b3@i)G&um'u#!Ffc76NCI0QABJrR11"cp
+G#!oM?G8Wc(r,a\f&PX-e[??Tr5PUWm5`N"g13Y]o4$CHe=sk_V+R_M<t)03/BYq<j/!T_EN+0f
+U\6<^B3].1$6<UU84#gkLlG.<:S@YDm3L+f'3kWQRc/9VaCrYG6rQo@ik]Lj@ZfGEq0@6.G=j2Q
+b/li'25J3jdCksjg/P;&XKNP8#>J_ZCO4HZ3,.!-/9h_-.MYe)^=T[kYrElB,&V8?G_!;@T[[p5
+#AI$AHTAFkrh)S()Pj7kLA(eS[n(2>!H<Q4`.J)H-BNe\HZee.eR1mF_#"0$a);'O?rPnTY'jUE
+?V:.r>Qr0j0=4U8OQ&C3A.Xs'&0@RXXUqRpdmejA&8?om5O\o0Ea_>*1#2t9JP"U"?Z/6iR/ojk
+@tpfsLhdkL%Ej'Blpj`)fhl&.@YLL=Q_@!sa5IVPMF=;b<&W_uruirmao@ugHM8.lb7OF:s'TGI
+6+Ve7`dp85n/0D=Z]NX0jFX6qepP!kp90a9;nT]i;CsS1)-.uFA`b&Xj=Q7Mb6\/AJPTdmLK*5\
+]&J@CD0IZbY(Z+a;YIu"<GdKjNV@mQq3f7qrekG.>(tgdpbuF`?\)HA%5*,IFk>qH^/)4N_n1Gf
+mI]W2$P<V(XB7H#m`M.E)`lgPl/-l8/H$BF-@\/7H&MHf5E%;m=`&ULBkl"#DEa8dCuprDC@[5_
+AZW%KWg2d:-2^<A=%NsPC@p6IMtdMY7VZk_bAsld:B+[dc!]iI6l+Ya!4*P\2RBX_:]9)]f7nY:
+J!3*JDLL^$Q6VZm5o0\F(Oq.K4Hr$7qM\D)NI^^.q]^cYq](dX3l+\SXV9[JG6EV<i1j/FNKeq"
+j6/2:d6_Fl*FeTkj$\kRc^]u"Oisr7iT0SX.pBR[4#sn`6u;$pFr6q#g.U6s,\2>pp$[;'9_WoS
+@AG+H1A\&4[]Wcr[<;0-/QY0OF7&7ZI!_3e=1Q6)I;*hC06BH_<K]^2V>[^Vaf9657to=<.G[[(
+^0"<W)Dm)HCjilYrD4gP:h[7*KNi(.cj7(XBr>A`]Pg;4kXCrlIlr/R^?#7/2B`LLRGfp%^Z2Ep
+Nh[\Z-R94a6h`_.l_0?e@JNfa<=fD6$o7$b#J0UM^XI2`%(K%q?$llOih?.^7/L?1`4TM5OkC7l
+)!;$g5pss;Y/ilc/RbjWU$LQ6B,C_@/]0%#-`lBK26d1c@!Fh<Am)rO8;bDM?QHphL1-i!S`<9/
+j)i:+UJ^Gu<*tuRp!"/;s2:&I16",&J!En`f36fk)9Cme\F>s]9D@@g-S/LcCO<D6\JTcgC5_^r
+egHlsSEd2E9PlOcWe&nKeo(%nC6S5L%0.eKAEo,JFIOu+kj<G.ip>,?*RU,l1?a!r@kVA?JCcjL
+_5C)SV]64biCDFRC1#Mnd:O1?CD'8d[CE_/fkn<Lm>NGqbq"VRTZ#PneCo71[^Jl5d.+PJn-0jQ
+A?d9;Jk6;4l\1C0Y7_i%9C@ECBn=UfTCSBMFE)u@DXXnoL'QZl)NAoqUWL72El.a0)6tr4I`4>Y
+Z5/V:kqua"eISh^iNAbm[-RPPpSU6%\=Op>O&LnSU#P8,bbi*bmqdTI[^K$Y>Y\@8J+Lb*aH;)H
+?L^/c;t`c&(`8bT,^L2#LSGor)sqB_:sQB+"?GG6ca#A2D+IAc,V)Nc\DOFZ@`':(rRm=@3;:u(
+23)%J4H_VU\gY3lW](-[Rp!5&adOqnCKbedATE7N?fl%f"@l8nl+P>[rVCAD5N9M>,9u\cQ:d8m
+[#Qo?.#=s"lc>ht1C(""gi4e4AAfAU#IrbWXZL7.I'V]D\D=22<nU,^$U8OmDsiNL.M.q;[!faV
+=Z$n\K=KmDJSD10K(3*4i6*s')*VG0%;T_N(W3D.-VDr:l]pafW]UB6qg+E2*g&.48Zi7Dq<C:J
+IBh?'%"i;&>`fQ)BUQ5,Tuq3P<#n!Wr9Up23a07)igtkQ0f(EJfDR-@(.?]K*jlu]EC(=oFKFqp
+_cmm1Lr6pXHFTu^@7n3[9?9U^INI:sBMPW9[63!nVGh!^)V*7QlU-sJ"<J_N%u$N,G$J4W5>i\]
+i^K=\F<Ob]-Hj8[<58Aa^r,e?kV*r:O<67"LPteiTOI>P$[V(5"Fkt28+iok&pjhn)C:*RHM/6C
+#0i7dP.ck/2in1Y.6sgF+3qEOm>n;R$TH<b1S==tB^4e36b7FCA33ucV[b>-^9H=+)%V$Vj3s1B
+$r$er6jX0>=TqDl1*>BKo*q7`9Nh[+NHMZ%RY)M]V'WN7+e25E5e.-+YfE!2&oEB;XA#HhnM&[t
+fgD',kYH+A'6,0[T^Rr$dMig<aYOr@C;3!seCJsGWc`H`=O1Tq<-n<dH_\#^U)edeo=`E:Q3#8e
+1)c0Br9?7aFqnt5W3'p8aAJd7o?eVHNdOZLC/U'386eTk#n;WP,%HTYpIfIjHVHi92`8"Pa#"gp
+VikK9d:$I=UY@=h?j`8cBT8^Y(mIqk\6;SIO:!6qo_G+0AZ5p25jB7hQXHmFf<eR\`aZY?Ya?5p
+7l83jS;u#i;cU>"FOaBU<tsbro85(D9$E6tRJ!]DhuT`LLhQ:Qn=K)o6(<ASG-E"^V[1.eG7.IR
+&*al>n7Z([]t6/g9Zgpc)4[[@D<jCCGRs^CU$mK-T6,L%qf^T2)-Gm<AcupT^HUS>-T3\hk8S%P
+L$oG9An6K1f,-l,;,`ih<5naKQJJlTemFZ8(S=J[Z[*:P-[+$V4@cWD^Am;[mY:R.5L^\W2mFk+
+p_JkD\ii&)Qm[]Io`L=UCi*WKF]FjDLf`;n?_AjK0cm=X!7]9]O?J3&`7Z40IJZs]\@UTsmYi5?
++6tJu*4GDm$A_UkL/E,h3A^9/B/R/+'>pZA'9cln<GA=8rlNsdghPO,PbrD=!$l*oV27Y2#G`<S
+Ae85fWu#Pl$8MW.9M?/gq*kA)It'b"lK!/s2-p>c^l8HPX4qVt\TuEOIW7,&T%Y(8*-uFFeL!Pl
+c10I6W_$mNQ5?UPr0AReV&'/TlX\5rTV)C92X,>u>M>%L\DrtZNM2;q4Ytd7@=;hQnEtFkEF%pd
+.Kaq_.&S<)=q=eQs37-gk)jU(b[t'<%cui&j*=+`i;mb6+]ChII3UQMm6#>"[?Ha'nP/<.K&Uh-
+adUL1';5>Jb&?YsrrY&>UK.!7HqBa#0\sSGM4u"$!o]N=Y8GQ,o%T1)SHi4E3-"K7BP`VmR2*`J
+bo^\Tdskj^)tE8<n1IuSa$7*64&CR(][@dj;Nn-c<+Bc^j0?;;G8@:d>4F4pcfWm1?jTq:q52R>
+kf/Ydhh&UoZW1i_XmMD:^h!kY?[L_F-T#Cq5>QnkFMlf"[Zc7<i+0V]cd6&Qc`m-3,o6+3mlU[S
+/:iQMN99eLa\L$E".<q@?"/Gk]Y(A:#F@24p7n4'Q?!2$g,/t<ARQNhK/PNWWM/q,o<k6Yl4UH.
+lkKd-'`%"hRCjlr>o6k4dKj(s6"OV91US=doWpe$H,.E$m5E2*%?KK&B'4*W*bH7C5@3@K_CUJ7
+d3!NgScfiYo>5japn\b.SE\K>pgGk;qqL8kLtu8^]A7rU:5"i!ht_oFr<6Ga35<"V6=Z[M^<mh,
+gNR"lQe/s[F6>U=DXb3OTgkr@cNWe-ofKBtUL3o/mL($opq<1!Vd`D87B43a[1j:D!N7i1N6STF
+jg.N'?+"R@nT[7&<T99JXrm&CI_\^'BKQF%bA[W&A,YrYpnMV#*8qRn5IA,),ORdF`c;QFW*%>#
+ak"_p9sF3*Y"-U+93a)\eYRe8.aUDsF/Mf^ZeVGA<AIR#EJEj\ql-R(jmZJd4"m]=>+e'Te$c%g
+jdqQ2bOM]^=n//+==f4ZRf-I9'>q5Ii-TE@E_OsoCCJ[/.JM?'m*WaQ@56PdXT$,t*GHsV]OFa'
+Uqrdi9/PAZ%UG"S"SY`al<ltOV$P.].@QNmPFn&2Q_.UF+tHV.AEV,DZ9aeaA]u^CpA<#I\-?96
+pI1!,Je*c7SN:TR3$)Q<YXZf13;;RuQ4MP2Dgl\)NIMpV$M,XYg<4:)>M$RVIX1ng(LMMr>K->Y
+3ammO$5Np@#7F^rGI4f%n=^?2dP\un2:,4soEpF1(Z],td!sE@7"nkU`3*fX8];iq5sYefb0Sar
+r:99[+bTODLU?47B9%J0bFot<3\m1rNM1?TQ6h3tNECaF,&dY*Tac!Z,BhPmngl?8RVHRUb&WE:
+3rT?I'_r=<$6D,jr"M2+F>u^T;%8@>0t*n#825.OR2qnRJM\ubZAR_Od`-UcCN#VU3@8%4l6r<C
+F:*Bt_d_"]5Q6[/Pti"><uu+/@kX?7%IW2LrjB@O_WLSK!p9)^E6l)Xi>&6Kh8!$82_g/GU.d+Z
+`;Ei\WF\8\$"cWNIg7u*`OSU&8Vq0pRqg*q7r!<nTYj>\&c;[&6Q"mcL[:DW)5Zk*=!S`P9a9ft
+0GqmOUE5Kq8Mt,(j"Y$MidV"-r67D~>
+endstream
+endobj
+11 0 obj
+<</Type/FontDescriptor/FontName/QUCTYP+Helvetica-Bold/FontBBox[0 -23 522 724]/Flags 65568
+/Ascent 724
+/CapHeight 724
+/Descent -23
+/ItalicAngle 0
+/StemV 78
+/MissingWidth 500
+/CharSet(/four/one/slash/three/two)/FontFile3 75 0 R>>
+endobj
+75 0 obj
+<</Filter[/ASCII85Decode
+/FlateDecode]
+/Subtype/Type1C/Length 767>>stream
+Gaqcp>t@n&(rtOo4D1R7h#-@]WLL(WV(U$g5qVUN'f26*#:1O]RlbJbc9?2g\;Ro%Ut?PjKV]Kq
+TokFCjMZt6/ei5]4t,Us\qm!\_<rM=GJ"-N"VKQQ4T(f.oC2YqPb3^JL,!gD8jj$06dE::JE"kJ
+>#NY-MEGA!WF:t4H<E%Egt=)P"e@.(c]cU_8/+AF"J^ZAa"X9FWK'4t3\5Wj@9e6WA7(>H])NkW
+g$NtLMZ01):+7H8r-5Er6mO&ioL]%$/+1c#7?NA07u7G`+ma<_-$O7oN)Piki@\8qK>BeU=*N0P
+`eF\%SQ8p?AY3``KMOW,+md"Tn,FU<+ngGgZ)JV76<&n9cjh<F:(*'P;)rAYe''H,"M&E'KijcE
+GBQ6IY$VP5M??p\@?"eteaPP+*K62L\.o+94^5*33S6MdN@J;=cP]PIU;/M,:_)YFP>"<*86<?i
+b\[-r#;CRQYbl=/@'9AnCZrKuAm.9i?:eJ35hR.OETtmBB:6T][UFkJ:n<:Ip'Zn][$2pM:-0I#
+J_UI<(k)O`gAmS+]ETIj&YH"cM7XF^a6pRh5/-4X5jpF'k3Y#6Xl,@apI6Co;0fBprsG&fT!d/2
+b*(((=6:U=-j)icHYP`l1se0l$$aMe<<jV$SbcmZ7dB-[oYP'P7HN,;jl;mac_8K@pEr+kJS3nT
+/lrDJM+:)q[<$G)X,EeY=J@^h@!efL(P*B:%gP8%c5OTAA17t)l2E[Q$jNZa%YdP@J>ug?!CFO%
+MsLOO~>
+endstream
+endobj
+9 0 obj
+<</Type/FontDescriptor/FontName/HQDPPP+Times-Bold/FontBBox[-24 -19 476 691]/Flags 65568
+/Ascent 691
+/CapHeight 691
+/Descent -19
+/ItalicAngle 0
+/StemV 71
+/MissingWidth 500
+/CharSet(/colon/eight/four/one/seven/six/slash/two/zero)/FontFile3 76 0 R>>
+endobj
+76 0 obj
+<</Filter[/ASCII85Decode
+/FlateDecode]
+/Subtype/Type1C/Length 1241>>stream
+Gar>BCJ7rD)#d8`VajpPd2fInm>2cY#.RQNUEd"&DIYI)$0fC56Da"A'RGD?d%W;JZFKZi*+Ke_
+OXaqC1)(SF$YY-b95oW"ZFG1:E<[.`>l<]1lA*@]M=H@NhRqJ'H/Ie]OA(6SMGdV_*^3D&iH%(]
+_bEH%-"KW$/864Xp_/q`/@>ElGqrDlYt?qPkKu+'=pOh/kY4KDM@'m4bW^NP_rY\@Er#mGFa<fY
+"oi.k9I:EcO8N5@G4>U"e'$j/:+,N(q)uAL=N[&NDR\ACQufh`rg!Q9jDaUKeZm/agjC'Ma5qL?
+rOu$%DpIC%#")7]BHF-rH0h4)=6oH7H+@[^M;-?VnIAXAoD\kYkap%R,%L//XX2^58k&&B)H%dq
+V5*pM#%aGQ;$\E\SHt[\Z7-<,>EU6l0DS:$OTM<:BYkU_?nP<u(=ArPYBp#*FGb%3-_A]'W>HHq
+'9#iQ:[DO4`VXIpF.4ITLeARos+TNc#1u#!#7Y(s"Sm`$?=.DYEQtboU]+Tg;pPS$F"htVoK%dV
++FiU=R1H#l,ZcLjj-XfUifZi:%=0IN+bGnVKT`epcL_Y@pRf*?G3&:RQl.n#ZKbIm"ZCLGl^qYg
+Jhj2WSEt\2hdV7-`@;:0KIWWDR"\55ciHm"5^UaGNb;jVjO:=:*r>`V[heL.boc%+#s*=0bLrV4
+34`A/*DDtE?'pFtK\saYiRaU_3sU0nLi$Qn>Q#4H/PRLG(mpsm]LENf<0.GUd56YG2VA'Ldac)?
+"rLm)h5-!tEjD:$mb@YAJVM8)H*U;@?A<:KpaJaJ@_[un2":".Hr\QenFq9[UJr3ATS!<Fd(4P4
+-<q;>?:SPf2+31UL*8X.(4eG9rTUI5I<*;.KPh/\gZ-[V5jijR6I$MYkp'9^`F0."Qm<^Be-@42
+L\c,K@sp<*10tgmq"1Q%JI=,9^s(O#_TS$0$13Q^G,:S7OUh0m4`i:Ll5XEo0MSW!j76R/hL.Dh
+rq3WX,SLKg?ih@rJ21CmAImR*CW!u[p(":pBcc#rm-cGj%D(Y>5kW$Y$f#m,qSo'bVr#/]^s_q%
+U*LVrh%+8NbBV'lj_bM0Wo)I2mki8IH"MAMI!Yd4A"!!lYgoVq,7FrZ7B?seAG3Ic%obW'QfcSQ
+:0lDI_!N0kK3Th"?lKs8#2[aPBY8V:Aoco0C&Wui#G90XGeUG3]Qn+8E`1+U>'29";5#EGF]!H9
+#rq&!Qq@P;YUUNaIfR`7_OC~>
+endstream
+endobj
+78 0 obj
+<</Type/Metadata
+/Subtype/XML/Length 1400>>stream
+<?xpacket begin='﻿' id='W5M0MpCehiHzreSzNTczkc9d'?>
+<?adobe-xap-filters esc="CRLF"?>
+<x:xmpmeta xmlns:x='adobe:ns:meta/' x:xmptk='XMP toolkit 2.9.1-13, framework 1.6'>
+<rdf:RDF xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' xmlns:iX='http://ns.adobe.com/iX/1.0/'>
+<rdf:Description rdf:about='aba202e1-b806-11ee-0000-6fd874e4ecb9' xmlns:pdf='http://ns.adobe.com/pdf/1.3/' pdf:Producer='GPL Ghostscript 8.70'/>
+<rdf:Description rdf:about='aba202e1-b806-11ee-0000-6fd874e4ecb9' xmlns:xmp='http://ns.adobe.com/xap/1.0/'><xmp:ModifyDate>2014-01-17T18:42:07-08:00</xmp:ModifyDate>
+<xmp:CreateDate>2014-01-17T18:42:07-08:00</xmp:CreateDate>
+<xmp:CreatorTool>GNU enscript 1.6.4</xmp:CreatorTool></rdf:Description>
+<rdf:Description rdf:about='aba202e1-b806-11ee-0000-6fd874e4ecb9' xmlns:xapMM='http://ns.adobe.com/xap/1.0/mm/' xapMM:DocumentID='aba202e1-b806-11ee-0000-6fd874e4ecb9'/>
+<rdf:Description rdf:about='aba202e1-b806-11ee-0000-6fd874e4ecb9' xmlns:dc='http://purl.org/dc/elements/1.1/' dc:format='application/pdf'><dc:title><rdf:Alt><rdf:li xml:lang='x-default'>Enscript Output</rdf:li></rdf:Alt></dc:title><dc:creator><rdf:Seq><rdf:li>Wesley Mackey</rdf:li></rdf:Seq></dc:creator></rdf:Description>
+</rdf:RDF>
+</x:xmpmeta>
+                                                                        
+                                                                        
+<?xpacket end='w'?>
+endstream
+endobj
+2 0 obj
+<</Producer(GPL Ghostscript 8.70)
+/CreationDate(D:20140117184207-08'00')
+/ModDate(D:20140117184207-08'00')
+/Title(Enscript Output)
+/Author(Wesley Mackey)
+/Creator(GNU enscript 1.6.4)>>endobj
+xref
+0 79
+0000000000 65535 f 
+0000025632 00000 n 
+0000046807 00000 n 
+0000025495 00000 n 
+0000023661 00000 n 
+0000000009 00000 n 
+0000000852 00000 n 
+0000025697 00000 n 
+0000028018 00000 n 
+0000043725 00000 n 
+0000027837 00000 n 
+0000042613 00000 n 
+0000026854 00000 n 
+0000028213 00000 n 
+0000027247 00000 n 
+0000033238 00000 n 
+0000025738 00000 n 
+0000025768 00000 n 
+0000023812 00000 n 
+0000000871 00000 n 
+0000003058 00000 n 
+0000025831 00000 n 
+0000025861 00000 n 
+0000023965 00000 n 
+0000003079 00000 n 
+0000005442 00000 n 
+0000025924 00000 n 
+0000025954 00000 n 
+0000024118 00000 n 
+0000005463 00000 n 
+0000006518 00000 n 
+0000026017 00000 n 
+0000026047 00000 n 
+0000024271 00000 n 
+0000006539 00000 n 
+0000009511 00000 n 
+0000026110 00000 n 
+0000026140 00000 n 
+0000024424 00000 n 
+0000009532 00000 n 
+0000012399 00000 n 
+0000026203 00000 n 
+0000026233 00000 n 
+0000024577 00000 n 
+0000012420 00000 n 
+0000013580 00000 n 
+0000026296 00000 n 
+0000026326 00000 n 
+0000024730 00000 n 
+0000013601 00000 n 
+0000014554 00000 n 
+0000026389 00000 n 
+0000026419 00000 n 
+0000024883 00000 n 
+0000014574 00000 n 
+0000016598 00000 n 
+0000026482 00000 n 
+0000026512 00000 n 
+0000025036 00000 n 
+0000016619 00000 n 
+0000019232 00000 n 
+0000026575 00000 n 
+0000026605 00000 n 
+0000025189 00000 n 
+0000019253 00000 n 
+0000021894 00000 n 
+0000026668 00000 n 
+0000026698 00000 n 
+0000025342 00000 n 
+0000021915 00000 n 
+0000023640 00000 n 
+0000026761 00000 n 
+0000026791 00000 n 
+0000028544 00000 n 
+0000033816 00000 n 
+0000042857 00000 n 
+0000043987 00000 n 
+0000027732 00000 n 
+0000045330 00000 n 
+trailer
+<< /Size 79 /Root 1 0 R /Info 2 0 R
+/ID [<B44E6079962C339AEBFA5DCFF068B6CF><B44E6079962C339AEBFA5DCFF068B6CF>]
+>>
+startxref
+47006
+%%EOF

@@ -1,0 +1,27 @@
+head	1.1;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.1
+date	2011.04.09.00.21.44;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@-
+@
+text
+@$Id: in0.hello.rf,v 1.1 2010-01-26 18:03:46-08 - - $
+
+Hello, World!
+This is a simple test of `jroff'.
+@

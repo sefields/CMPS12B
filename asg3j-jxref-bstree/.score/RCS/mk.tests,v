@@ -1,0 +1,33 @@
+head	1.1;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.1
+date	2011.01.29.04.00.25;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@-
+@
+text
+@#!/bin/sh -x
+# $Id: mk.tests,v 1.1 2010-10-22 18:36:09-07 - - $
+PROG=./jxref
+denied=/afs/cats.ucsc.edu/class/cmps012b-wm.f07/.denied
+runprogram.perl -0data1.in -otest1 $PROG
+runprogram.perl            -otest2 $PROG  data1.in
+runprogram.perl            -otest3 $PROG  data*.in /dev/null
+runprogram.perl            -otest6 $PROG -d data1.in
+runprogram.perl            -otest7 $PROG -f data2.in
+runprogram.perl            -otest8 $PROG /no/such/file $denied
+@

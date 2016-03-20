@@ -1,0 +1,105 @@
+head	1.2;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.2
+date	2014.02.18.22.39.57;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2014.01.17.01.44.47;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@-
+@
+text
+@// $Id: queue.java,v 1.1 2014-01-16 17:44:47-08 - - $
+// Sam Fields sefields
+//
+
+import java.util.Iterator;
+import java.util.NoSuchElementException;
+import java.io.*;
+import static java.lang.System.*;
+import static java.lang.String.*;
+
+class queue <item_t> implements Iterable <item_t> {
+
+   private class node {
+      item_t item;
+      node link;
+   }
+   private node head = null;
+   private node tail = null;
+
+   public boolean isempty () {
+       return head == null;
+   }
+
+   public void insert (item_t newitem) {
+       //Make a new node
+       node a = new node();
+       //new gets newitem as its item
+       a.item = newitem;
+       //new points to nothing
+       a.link = null;
+       //If the queue is empty, head gets new
+       if (isempty()) head = a;
+       //Otherwise the current rear node points to new
+       else tail.link = a;
+       //and new is the rear node
+       tail = a;
+   }
+
+   public Iterator <item_t> iterator () {
+      return new itor ();
+   }
+
+   class itor implements Iterator <item_t> {
+      node next = head;
+      public boolean hasNext () {
+         return next != null;
+      }
+      public item_t next () {
+         if (! hasNext ()) throw new NoSuchElementException ();
+         item_t result = next.item;
+         next = next.link;
+         return result;
+      }
+      public void remove () {
+         throw new UnsupportedOperationException ();
+      }
+   }
+
+}
+@
+
+
+1.1
+log
+@-
+@
+text
+@d1 3
+a3 1
+// $Id: queue.java,v 1.1 2011-01-28 19:52:24-08 - - $
+d7 3
+d21 1
+a21 1
+      throw new RuntimeException ("Replace this with working code");
+d25 12
+a36 1
+      throw new RuntimeException ("Replace this with working code");
+@

@@ -1,0 +1,5 @@
+Exception in thread "main" java.lang.NumberFormatException: For input string: "-foobar"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:492)
+	at java.lang.Integer.parseInt(Integer.java:527)
+	at jfmt.main(jfmt.java:102)

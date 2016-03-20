@@ -1,0 +1,86 @@
+$Id: SCORE,v 1.1 2011-01-28 20:00:25-08 - - $
+
+Copy this SCORE file and other files into the student's submit
+directory.  For any point deduction, note it in the left margin,
+and add a comment under it indicating the reason for the loss of
+points.
+
+*****************************************************************
+
+SOURCE CODE = 30 points
+
+    (3) checksource:  3 pts if <= 5 complaints;
+        2 pts for 6 to 15 complaints;
+        1 pt for 16 to 30 complaints; 0 pts if >30.
+
+    (3) Proper formatting, indentation.
+        no 1-letter idents.  all idents are meaningful.
+
+    (3) function xref_file modified to reference bstree and
+        spurious print statement deleted
+
+    (3) Normal output is printed by main's wordvisitor, and
+        no print statements in treemap's do_visits
+
+    (3) Uses iterator form of for loop in class printer to print
+        the queue
+
+    Are each of the following functions properly coded and
+    reasonably readable and complete?
+
+    (3) treemap.get
+
+    (3) treemap.put
+
+    (3) debug_dump, debug_dump_rec
+
+    (3) do_visit, do_visit_rec
+
+    (3) queue.insert
+
+*****************************************************************
+
+TESTING = 30 points
+
+    0 points total for this section if compilation failed.
+
+    mk.tests
+    output in *.stdout *.stderr and status in *.status
+
+    (3) gmake built a jar file.
+        grader build jar by cmd if not, and deduct these 3 pts.
+
+    (3) exit status is 0 when no errors and 1 with errors
+
+    (3) error messages printed for inaccessible files
+        and printed to stderr not stdout
+
+    (3) error messages for files include the getMessage text,
+        indicating reason for access failure
+
+    (3) -d option dumped in debug format.  indent and level counts
+        reasonable showing that it really is bin search tree
+
+    (3) -f option folds upper case into lower case
+
+    (3) words printed out in lexicographic order
+
+    (3) queue of numbers printed out in increasing order of line
+
+    (3) multiple files handled properly and titles printed as for
+        pxref.perl reference implementation
+
+    (3) Deduct 1 points (max 3 points) for each test run that
+        crashed on a Java error, uncaught exception, and traceback.
+
+*****************************************************************
+
+SUBTOTAL=
+min 1, max 60
+
+If pair programming, TOTALSCORE = SUBTOTAL - TOTAL1.
+If not, TOTALSCORE = SUBTOTAL.
+
+TOTALSCORE=
+minimum: 1; maximum: 60
+

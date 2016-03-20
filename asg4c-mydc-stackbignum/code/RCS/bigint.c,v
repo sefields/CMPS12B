@@ -1,0 +1,730 @@
+head	1.14;
+access;
+symbols;
+locks;
+comment	@ * @;
+
+
+1.14
+date	2014.03.04.04.37.39;	author -;	state -;
+branches;
+next	1.13;
+
+1.13
+date	2014.01.25.02.33.47;	author -;	state -;
+branches;
+next	1.12;
+
+1.12
+date	2013.05.16.22.14.31;	author -;	state -;
+branches;
+next	1.11;
+
+1.11
+date	2013.05.10.01.59.04;	author -;	state -;
+branches;
+next	1.10;
+
+1.10
+date	2013.05.09.05.09.41;	author -;	state -;
+branches;
+next	1.9;
+
+1.9
+date	2013.05.09.01.53.30;	author -;	state -;
+branches;
+next	1.8;
+
+1.8
+date	2013.05.08.04.14.09;	author -;	state -;
+branches;
+next	1.7;
+
+1.7
+date	2013.05.04.02.39.51;	author -;	state -;
+branches;
+next	1.6;
+
+1.6
+date	2013.05.04.02.33.54;	author -;	state -;
+branches;
+next	1.5;
+
+1.5
+date	2013.05.02.21.15.47;	author -;	state -;
+branches;
+next	1.4;
+
+1.4
+date	2013.02.19.22.46.04;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2013.02.19.20.36.45;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2013.02.19.20.31.09;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2013.02.16.03.41.09;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.14
+log
+@-
+@
+text
+@// $Id: bigint.c,v 1.13 2014-01-24 18:33:47-08 - - $
+// Sam Fields sefields
+
+#include <assert.h>
+#include <ctype.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#include "bigint.h"
+#include "debug.h"
+
+#define MIN_CAPACITY 16
+
+struct bigint {
+   size_t capacity;
+   size_t size;
+   bool negative;
+   char *digits;
+};
+
+static void trim_zeros (bigint *this) {
+   while (this->size > 0) {
+      size_t digitpos = this->size - 1;
+      if (this->digits[digitpos] != 0) break;
+      --this->size;
+   }
+}
+
+static int doCompare (bigint *this, bigint *that) {
+  if (this->size > that->size) return 1;
+  if (that->size > this->size) return -1;
+  for (size_t index = 0; index < this->size; index++) {
+    if (strcmp(this->digits,that->digits)>0) return 1;
+    if (strcmp(that->digits,this->digits)>0) return -1; 
+  }
+  return 0;
+}
+
+bigint *new_bigint (size_t capacity) {
+   bigint *this = malloc (sizeof (bigint));
+   assert (this != NULL);
+   this->capacity = capacity;
+   this->size = 0;
+   this->negative = false;
+   this->digits = calloc (this->capacity, sizeof (char));
+   assert (this->digits != NULL);
+   DEBUGS ('b', show_bigint (this));
+   return this;
+}
+
+
+bigint *new_string_bigint (char *string) {
+   assert (string != NULL);
+   size_t length = strlen (string);
+   bigint *this = new_bigint (length > MIN_CAPACITY
+                            ? length : MIN_CAPACITY);
+   char *strdigit = &string[length - 1];
+   if (*string == '_') {
+      this->negative = true;
+      ++string;
+   }
+   char *thisdigit = this->digits;
+   while (strdigit >= string) {
+      assert (isdigit (*strdigit));
+      *thisdigit++ = *strdigit-- - '0';
+   }
+   this->size = thisdigit - this->digits;
+   trim_zeros (this);
+   DEBUGS ('b', show_bigint (this));
+   return this;
+}
+
+static bigint *do_add (bigint *this, bigint *that) {
+  bigint *result = new_bigint(this->capacity > that->capacity
+			     ? this->capacity+1 : that->capacity+1);
+  int digit = 0;
+  int carry = 0;
+  int length = 0;
+  if (this->capacity > that->capacity) length = this->capacity;
+  if (that->capacity > this->capacity) length = that->capacity;
+  else length = this->capacity;
+  for (int index = 0; index < length; index++ ) {
+    digit = this->digits[index] + that->digits[index] + carry;
+    result->digits[index] = digit % 10;
+    carry = digit /10;
+    }
+  free_bigint(this);
+  free_bigint(that);
+  return result;
+}
+
+static bigint *do_sub (bigint *this, bigint *that) {
+  bigint *result = new_bigint(this->capacity);
+  result->size = this->size + that->size;
+  int digit = 0;
+  int borrow = 0;
+  int length = this->capacity;
+  for (int index = 0; index < length; index ++) {
+    digit = this->digits[index] - that->digits[index] - borrow + 10;
+    result->digits[index] = digit % 10;
+    borrow = 1 - digit /10;
+  }
+  trim_zeros(result);
+  free_bigint(this);
+  free_bigint(that);
+  return result;
+}
+
+void free_bigint (bigint *this) {
+   free (this->digits);
+   free (this);
+}
+
+void print_bigint (bigint *this, FILE *file) {
+  if (this->negative) printf("_");
+  for(char *i = &this->digits[this->size-1]; i>= this->digits; --i){
+  fprintf(file,"%d",*i);
+  }
+  fprintf(file,"\n");
+}
+
+bigint *add_bigint (bigint *this, bigint *that) {
+  //Make a new bigint to store the result in:
+  bigint *result = new_bigint(this->capacity > that->capacity
+      ? this->capacity+1 : that->capacity+1);
+  //If both have the same sign, do_add
+  if (this->negative == that->negative) {
+    result = do_add(this, that);
+    result -> negative = this -> negative;
+  }
+  //If they are different signs, do_sub
+  else {
+    //Make sure the larger number is first
+    if (doCompare(this, that) == 1 
+	|| doCompare(this,that)== 0) {
+      result = do_sub(this,that);
+      result -> negative = this -> negative;
+    }
+    if (doCompare(this, that) == -1) {
+      result = do_sub(that,this);
+      result -> negative = that -> negative;
+    }
+  }
+  result->size = this->size + that->size;
+  trim_zeros(result);
+  return result;
+}
+
+bigint *sub_bigint (bigint *this, bigint *that) {
+  bigint *result = new_bigint(this->capacity > that->capacity
+			     ? this->capacity+1 : that->capacity+1);
+  //If the signs are different, call do_add
+  if (this->negative != that->negative) {
+    result = do_add(this, that);
+    //If the first number is smaller, the result is negative 
+    if (doCompare(this, that) < 0) result->negative = true;
+    //Otherwise the result is positive
+    else result->negative = false; 
+  }
+  //If the signs are the same, call do_sub
+  else if (!this->negative && !that->negative) {
+    result = do_sub (this, that);
+    if (doCompare(this,that) < 0) result->negative = true;
+    else result -> negative = false;
+  }
+  else {
+    result = do_sub(this, that);
+    if (doCompare(this,that) <0) result->negative = false;
+    else result-> negative = true;
+  }
+  return result;
+}
+
+
+bigint *mul_bigint (bigint *this, bigint *that) {
+  bigint *result = new_bigint(this->capacity > that->capacity
+			     ? this->capacity+1 : that->capacity+1);
+  result->size = this->size + that->size;
+  for (size_t i = 0; i < this->size ; i++) {
+    int carry = 0;
+    for (size_t j = 0; j < that->size; j++) {
+      int digit = result->digits[i+j] + this->digits[i]*that->digits[j]+carry;
+      result->digits[i+j] = digit % 10;
+      carry = digit / 10;
+    }result->digits[i+that->size] = carry;
+  }
+  if (this->negative == that->negative) result->negative = false;
+  else result->negative = true;
+  free_bigint(this);
+  free_bigint(that);
+  return result;
+}
+
+void show_bigint (bigint *this) {
+   fprintf (stderr, "bigint@@%p->{%lu,%lu,%c,%p->", this,
+            this->capacity, this->size, this->negative ? '-' : '+',
+            this->digits);
+   for (char *byte = &this->digits[this->size - 1];
+        byte >= this->digits; --byte) {
+      fprintf (stderr, "%d", *byte);
+   }
+   fprintf (stderr, "}\n");
+}
+@
+
+
+1.13
+log
+@-
+@
+text
+@d1 2
+a2 1
+// $Id: bigint.c,v 1.12 2013-05-16 15:14:31-07 - - $
+d30 10
+d75 16
+a90 3
+   DEBUGS ('b', show_bigint (this));
+   DEBUGS ('b', show_bigint (that));
+   STUB (return NULL);
+d94 14
+a107 3
+   DEBUGS ('b', show_bigint (this));
+   DEBUGS ('b', show_bigint (that));
+   STUB (return NULL);
+d109 1
+d116 5
+a120 1
+   DEBUGS ('b', show_bigint (this));
+d124 24
+a147 4
+   DEBUGS ('b', show_bigint (this));
+   DEBUGS ('b', show_bigint (that));
+   STUB (return NULL);
+   return NULL;
+d151 22
+a172 4
+   DEBUGS ('b', show_bigint (this));
+   DEBUGS ('b', show_bigint (that));
+   STUB (return NULL);
+   return NULL;
+d177 16
+a192 4
+   DEBUGS ('b', show_bigint (this));
+   DEBUGS ('b', show_bigint (that));
+   STUB (return NULL);
+   return NULL;
+a204 1
+
+@
+
+
+1.12
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: bigint.c,v 1.11 2013-05-09 18:59:04-07 - - $
+d41 1
+d60 1
+a60 1
+   return this;;
+a62 1
+
+d97 1
+@
+
+
+1.11
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: bigint.c,v 1.10 2013-05-08 22:09:41-07 - - $
+d4 1
+d44 1
+a44 1
+   bigint *this = new_bigint (length < MIN_CAPACITY
+d53 1
+a53 1
+      assert ('0' <= *strdigit && *strdigit <= '9');
+@
+
+
+1.10
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: bigint.c,v 1.9 2013-05-08 18:53:30-07 - - $
+d53 1
+a53 1
+      *thisdigit++ = (*strdigit--) - '0';
+@
+
+
+1.9
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: bigint.c,v 1.8 2013-05-07 21:14:09-07 - - $
+d36 1
+d42 6
+a47 6
+   size_t capacity = strlen (string);
+   if (capacity < MIN_CAPACITY) capacity = MIN_CAPACITY;
+   bigint *this = new_bigint (capacity);
+   char *strdigit = string + capacity - 1;
+   if (string[strindex] == '_') {
+      negative = true;
+d50 4
+a53 3
+   for (char *thisdigit = this->digits; strdigit >= string; ++digit) {
+      assert (0 <= *strdigit && *strdigit <= 9);
+      *thisdigit++ = *strdigit--;
+d57 2
+a58 1
+   return NULL;
+d104 5
+a108 4
+   fprintf (stderr, "bigint@@%p->{%lu,%lu,%c", this,
+            this->capacity, this->size, this->negative ? '-' : '+');
+   for (char *byte = &this->digits[this->size] - 1;
+        byte >= this->digits; ++byte) {
+a113 1
+
+@
+
+
+1.8
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: bigint.c,v 1.7 2013-05-03 19:39:51-07 - - $
+d11 2
+d17 1
+a17 1
+   char *buffer;
+d23 1
+a23 1
+      if (this->buffer[digitpos] != 0) break;
+d34 2
+a35 2
+   this->buffer = calloc (capacity, sizeof (char));
+   assert (this->buffer != NULL);
+d42 4
+a45 3
+   assert (capacity > 0);
+   bool negative = false;
+   if (*string == '_') {
+a47 1
+      --capacity;
+d49 3
+a51 5
+   bigint *this = new_bigint (capacity);
+   for (size_t index = 0; index < capacity; ++index) {
+      char digit = string[capacity - 1 - index] - '0';
+      assert (0 <= digit && digit <= 9);
+      this->buffer[index] = digit;
+d53 1
+a53 1
+   this->size = capacity;
+d71 1
+a71 1
+   free (this->buffer);
+d103 2
+a104 2
+   for (char *byte = &this->buffer[this->size] - 1;
+        byte >= this->buffer; ++byte) {
+@
+
+
+1.7
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: bigint.c,v 1.6 2013-05-03 19:33:54-07 - - $
+d9 1
+d12 2
+a14 2
+   size_t capacity;
+   size_t digits;
+d18 5
+a22 5
+static void trim_zeros (bigint *bigint) {
+   while (bigint->digits > 0) {
+      size_t digitpos = bigint->digits - 1;
+      if (bigint->buffer[digitpos] != 0) break;
+      --bigint->digits;
+d27 8
+a34 8
+   bigint *bigint = malloc (sizeof (bigint));
+   assert (bigint != NULL);
+   bigint->negative = false;
+   bigint->capacity = capacity;
+   bigint->digits = 0;
+   bigint->buffer = calloc (capacity, sizeof (char));
+   assert (bigint->buffer != NULL);
+   return bigint;
+d47 1
+a47 1
+   bigint *bigint = new_bigint (capacity);
+d51 1
+a51 1
+      bigint->buffer[index] = digit;
+d53 2
+a54 2
+   bigint->digits = capacity;
+   trim_zeros (bigint);
+d59 4
+a62 1
+static bigint *do_add (bigint *left, bigint *right) {
+d65 4
+a68 1
+static bigint *do_sub (bigint *left, bigint *right) {
+d70 3
+a72 3
+void free_bigint (bigint *bigint) {
+   free (bigint->buffer);
+   free (bigint);
+d75 2
+a76 1
+void print_bigint (bigint *bigint, FILE *file) {
+d79 4
+a82 1
+bigint *add_bigint (bigint *left, bigint *right) {
+d86 4
+a89 1
+bigint *sub_bigint (bigint *left, bigint *right) {
+d93 4
+a96 1
+bigint *mul_bigint (bigint *left, bigint *right) {
+d100 11
+@
+
+
+1.6
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: bigint.c,v 1.5 2013-05-02 14:15:47-07 - - $
+d17 8
+d47 2
+a48 2
+   while (*string != '\0') {
+      char digit = string[xxxx] - '0';
+d50 1
+a50 1
+      bigint->buffer[index++] = digit;
+d52 1
+a57 8
+static void trim_zeros (bigint *bigint) {
+   while (bigint->digits > 0) {
+      size_t digitpos = bigint->digits - 1;
+      if (bigint->buffer[digitpos] != 0) break;
+      --bigint->digits;
+   }
+}
+
+@
+
+
+1.5
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: bigint.c,v 1.4 2013-02-19 14:46:04-08 - - $
+d12 1
+a12 1
+   size_t size;
+d17 1
+a17 16
+static void trim_zeros (bigint *bigint) {
+   while (bigint->digits > 0) {
+      size_t digitpos = bigint->digits - 1;
+      if (bigint->buffer[digitpos] != 0) break;
+      --bigint->digits;
+   }
+}
+
+static bigint *do_add (bigint *left, bigint *right) {
+}
+
+static bigint *do_sub (bigint *left, bigint *right) {
+}
+
+
+bigint *new_bigint (size_t size) {
+d21 1
+a21 1
+   bigint->size = size;
+d23 1
+a23 1
+   bigint->buffer = calloc (size, sizeof (char));
+d30 3
+a32 3
+   size_t size = strlen (string);
+   assert (size > 0);
+   bigint *bigint = new_bigint (size);
+d34 1
+a34 1
+      bigint->negative = true;
+d36 1
+a36 1
+      --size;
+d38 3
+a40 3
+   int index = 0;
+   while (size-- > 0) {
+      char digit = string[size] - '0';
+d49 13
+@
+
+
+1.4
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: bigint.c,v 1.3 2013-02-19 12:36:45-08 - - $
+a9 2
+static char *bigint_tag = "struct bigint";
+
+d11 2
+a12 3
+   char *tag;
+   bool is_negative;
+   size_t length;
+d32 2
+a33 2
+bigint *new_bigint (size_t length) {
+   bigint *bigint = malloc (sizeof (struct bigint));
+d35 2
+a36 3
+   bigint->tag = bigint_tag;
+   bigint->is_negative = false;
+   bigint->length = length;
+d38 1
+a38 1
+   bigint->buffer = calloc (length, sizeof (char));
+d45 3
+a47 3
+   size_t length = strlen (string);
+   assert (length > 0);
+   bigint *bigint = new_bigint (length);
+d49 1
+a49 1
+      bigint->is_negative = true;
+d51 1
+a51 1
+      --length;
+d54 2
+a55 2
+   while (--length > 0) {
+      char digit = string[length] - '0';
+a64 1
+   assert (is_bigint (bigint));
+a65 1
+   memset (bigint, 0, sizeof (bigint));
+a69 1
+   assert (is_bigint (bigint));
+a72 2
+   assert (is_bigint (left));
+   assert (is_bigint (right));
+a76 2
+   assert (is_bigint (left));
+   assert (is_bigint (right));
+a80 2
+   assert (is_bigint (left));
+   assert (is_bigint (right));
+a83 4
+bool is_bigint (bigint *bigint) {
+   return false;
+}
+
+@
+
+
+1.3
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: bigint.c,v 1.2 2013-02-19 12:31:09-08 - - $
+a58 1
+      // LINTED (assignment of 32-bit integer to 8-bit integer)
+d70 3
+@
+
+
+1.2
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: bigint.c,v 1.1 2013-02-15 19:41:09-08 - - $
+d47 1
+a47 1
+bigint *new_bigint_string (char *string) {
+d50 1
+@
+
+
+1.1
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: bigint.c,v 1.3 2012-03-06 16:27:19-08 - - $
+d72 1
+a72 1
+void print_bigint (bigint *bigint) {
+@

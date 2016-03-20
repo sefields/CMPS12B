@@ -1,0 +1,1 @@
+mydc: stack.c:61: pop_stack: Assertion `!empty_stack (this)' failed.

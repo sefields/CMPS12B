@@ -1,0 +1,107 @@
+head	1.4;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.4
+date	2013.04.10.02.59.29;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2013.04.10.02.59.02;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2013.04.10.02.58.46;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2013.04.10.02.58.15;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.4
+log
+@-
+@
+text
+@
+import static java.lang.System.*;
+
+class test {
+   public static void main (String[] args) {
+      for (String s: args) {
+         switch (s) {
+            case ".\\\"": out.println (".\\\""); break;
+            case ".bp": out.println (".bp"); break;
+            case ".br": out.println (".br"); break;
+            case ".cc": out.println (".cc"); break;
+            case ".in": out.println (".in"); break;
+            case ".ll": out.println (".ll"); break;
+            case ".mt": out.println (".mt"); break;
+            case ".tl": out.println (".tl"); break;
+            case ".pl": out.println (".pl"); break;
+            case ".po": out.println (".po"); break;
+            case ".sp": out.println (".sp"); break;
+            default: out.println ("default"); break;
+         }
+      }
+   }
+}
+
+@
+
+
+1.3
+log
+@-
+@
+text
+@d7 1
+a7 1
+         switch (args[0]) {
+@
+
+
+1.2
+log
+@-
+@
+text
+@d8 12
+a19 12
+            case ".\\\"": out.println (".\\\"");
+            case ".bp": out.println (".bp");
+            case ".br": out.println (".br");
+            case ".cc": out.println (".cc");
+            case ".in": out.println (".in");
+            case ".ll": out.println (".ll");
+            case ".mt": out.println (".mt");
+            case ".tl": out.println (".tl");
+            case ".pl": out.println (".pl");
+            case ".po": out.println (".po");
+            case ".sp": out.println (".sp");
+            default: out.println ("default");
+@
+
+
+1.1
+log
+@-
+@
+text
+@d2 2
+d8 1
+a8 1
+            case ".\\="": out.println (".\\\"");
+@
